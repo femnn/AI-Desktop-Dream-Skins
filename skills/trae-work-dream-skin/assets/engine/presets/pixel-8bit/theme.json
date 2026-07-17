@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pixel-8bit",
+  "name": "PIXEL WORK 8-BIT",
+  "visualStyle": "pixel-8bit",
+  "brandSubtitle": "TRAE WORK · PIXEL MODE",
+  "tagline": "把大任务拆成小关卡，一个一个完成。",
+  "statusText": "STAGE 1 · READY",
+  "quote": "PRESS START",
+  "image": "pixel-8bit-demo.png",
+  "colors": {
+    "background": "#758df1",
+    "panel": "#fff8db",
+    "panelAlt": "#ffd080",
+    "accent": "#e86f25",
+    "accentAlt": "#ff9847",
+    "secondary": "#2fba16",
+    "highlight": "#ffb34d",
+    "text": "#141414",
+    "muted": "#484848",
+    "line": "rgba(20, 20, 20, .52)"
+  }
+}

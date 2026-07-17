@@ -1,0 +1,4 @@
+interface:
+  display_name: "TRAE Work Dream Skin"
+  short_description: "安装、定制、验证并打包 TRAE Work 桌面主题"
+  default_prompt: "使用 $trae-work-dream-skin 把我的图片做成 TRAE Work 主题并完成实机验证。"

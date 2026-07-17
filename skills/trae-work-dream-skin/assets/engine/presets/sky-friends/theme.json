@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "sky-friends",
+  "name": "SKY FRIENDS",
+  "visualStyle": "sky-friends",
+  "brandSubtitle": "TRAE WORK · FRIEND MODE",
+  "tagline": "放轻节奏，把今天的小任务慢慢完成。",
+  "statusText": "FRIENDS ONLINE · READY",
+  "quote": "LET'S GO",
+  "image": "sky-friends-demo.png",
+  "colors": {
+    "background": "#b7e4fa",
+    "panel": "#fffef6",
+    "panelAlt": "#f9e8a4",
+    "accent": "#ee9fb8",
+    "accentAlt": "#f6b8ca",
+    "secondary": "#77a9c7",
+    "highlight": "#ffd3df",
+    "text": "#263744",
+    "muted": "#637887",
+    "line": "rgba(70, 119, 148, .28)"
+  }
+}

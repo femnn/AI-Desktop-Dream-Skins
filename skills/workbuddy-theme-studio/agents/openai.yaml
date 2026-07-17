@@ -1,0 +1,4 @@
+interface:
+  display_name: "WorkBuddy Theme Studio"
+  short_description: "生成、验证并热切换 WorkBuddy 专属主题包"
+  default_prompt: "使用 $workbuddy-theme-studio 为 WorkBuddy 制作一套完整主题并完成 DOM 与截图验证。"

@@ -1,0 +1,7 @@
+{
+  "id": "astro-dualsense",
+  "displayName": "ASTRO DualSense",
+  "description": "只有左右原生握把作为脚、会悬浮和观察方向的白蓝手柄伙伴。",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "spritesheet.webp"
+}

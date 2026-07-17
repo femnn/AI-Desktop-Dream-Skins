@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "astro-bot",
+  "name": "ASTRO BOT · 星舰",
+  "description": "白蓝星际机器人界面与会眨眼的 DualSense 宠物套装。",
+  "theme": {
+    "path": "theme"
+  },
+  "pet": {
+    "id": "astro-dualsense",
+    "path": "pet",
+    "selectedAvatarId": "custom:astro-dualsense"
+  },
+  "compatibility": {
+    "platform": "darwin",
+    "minSkinVersion": "1.1.1"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "electric-forest",
+  "name": "ELECTRIC FOREST",
+  "visualStyle": "electric-forest",
+  "brandSubtitle": "TRAE WORK · ELECTRIC MODE",
+  "tagline": "保持满格电量，把今天的任务逐个点亮。",
+  "statusText": "ENERGY 100% · READY",
+  "quote": "STAY CHARGED",
+  "image": "electric-forest-demo.png",
+  "colors": {
+    "background": "#f5df48",
+    "panel": "#fff9db",
+    "panelAlt": "#f7d64a",
+    "accent": "#e4472d",
+    "accentAlt": "#f06443",
+    "secondary": "#6d8d2b",
+    "highlight": "#ffcb20",
+    "text": "#2d2a17",
+    "muted": "#6a6538",
+    "line": "rgba(80, 67, 16, .34)"
+  }
+}

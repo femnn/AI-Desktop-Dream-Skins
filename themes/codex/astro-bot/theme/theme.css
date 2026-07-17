@@ -1,0 +1,679 @@
+html.codex-dream-skin[data-dream-theme="astro-bot"] {
+  color-scheme: dark;
+  --astro-blue: #36a9ff;
+  --astro-cyan: #82e9ff;
+  --astro-navy: #040a18;
+  --astro-panel: rgba(7, 22, 44, .92);
+  --astro-white: #f5fbff;
+  --astro-coral: #ff7d73;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] body {
+  background:
+    radial-gradient(circle at 82% 14%, rgba(54, 169, 255, .16), transparent 30%),
+    radial-gradient(circle at 25% 80%, rgba(126, 231, 255, .07), transparent 28%),
+    linear-gradient(180deg, #030713 0%, #061226 100%) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] body::before {
+  opacity: .46 !important;
+  background-image:
+    radial-gradient(circle, rgba(130, 233, 255, .72) 0 1px, transparent 1.8px),
+    radial-gradient(circle, rgba(255, 255, 255, .42) 0 1px, transparent 1.6px) !important;
+  background-size: 83px 83px, 137px 137px !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel {
+  background:
+    linear-gradient(180deg, rgba(248, 252, 255, .98) 0%, rgba(226, 241, 252, .97) 100%) !important;
+  border: 1px solid rgba(130, 233, 255, .62) !important;
+  border-left: 0 !important;
+  box-shadow: 10px 0 34px rgba(0, 25, 60, .28), inset -1px 0 rgba(255, 255, 255, .84) !important;
+  color: #08203a !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel button,
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel a,
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel span,
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel div {
+  color: #08203a !important;
+  text-shadow: none !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel svg {
+  color: #087bd0 !important;
+  filter: drop-shadow(0 0 7px rgba(54, 169, 255, .22));
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel button[aria-label^="切换模式"] {
+  color: #08203a !important;
+  font-family: "SF Pro Rounded", "PingFang SC", system-ui, sans-serif !important;
+  letter-spacing: -.02em !important;
+  text-shadow: none !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel button[aria-label^="切换模式"]::after {
+  content: "  ● ●" !important;
+  color: #36a9ff !important;
+  font-size: 7px !important;
+  letter-spacing: 4px !important;
+  text-shadow: 0 0 9px rgba(54, 169, 255, .66) !important;
+  vertical-align: middle;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel button:not([aria-label^="切换模式"]) > div > span:has(> svg),
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel a > div > span:has(> svg),
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel button[aria-label="搜索"],
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel button[aria-label="帮助"] {
+  width: 34px !important;
+  height: 29px !important;
+  padding: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  flex: 0 0 34px !important;
+  border: 2px solid rgba(235, 250, 255, .96) !important;
+  border-radius: 13px 13px 10px 10px !important;
+  background:
+    radial-gradient(ellipse at 36% 51%, #e9fdff 0 1.4px, #59d7ff 1.8px 2.8px, transparent 3.5px),
+    radial-gradient(ellipse at 64% 51%, #e9fdff 0 1.4px, #59d7ff 1.8px 2.8px, transparent 3.5px),
+    linear-gradient(155deg, #071529, #020711) !important;
+  box-shadow:
+    0 0 0 2px rgba(54, 169, 255, .18),
+    0 6px 13px rgba(0, 67, 121, .2),
+    inset 0 1px rgba(255, 255, 255, .14) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel button > div > span:has(> svg) > svg,
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel a > div > span:has(> svg) > svg,
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel button[aria-label="搜索"] > svg,
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel button[aria-label="帮助"] > svg {
+  display: none !important;
+}
+
+/* The active sidebar destination uses the pack's disc motif instead of the visor. */
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel [aria-current="page"] span:has(> svg),
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel [class~="bg-token-list-hover-background"] span:has(> svg) {
+  width: 31px !important;
+  height: 31px !important;
+  flex-basis: 31px !important;
+  border: 2px solid rgba(241, 252, 255, .98) !important;
+  border-radius: 50% !important;
+  background:
+    radial-gradient(circle, #dff8ff 0 3px, #36a9ff 3.5px 5px, transparent 5.5px),
+    radial-gradient(circle at 36% 34%, rgba(255,255,255,.9) 0 1px, transparent 2px),
+    conic-gradient(from 25deg, #72e8ff, #176dd2, #9b7cff, #58e7ff, #0c4aa2, #72e8ff) !important;
+  box-shadow: 0 0 0 2px rgba(54, 169, 255, .22), 0 0 14px rgba(54, 169, 255, .48) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel [aria-current="page"] span:has(> svg) > svg,
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel [class~="bg-token-list-hover-background"] span:has(> svg) > svg {
+  display: none !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel button:hover,
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel [aria-current="page"],
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel [class~="bg-token-list-hover-background"] {
+  background: linear-gradient(90deg, rgba(54, 169, 255, .16), rgba(130, 233, 255, .08)) !important;
+  border-color: rgba(54, 169, 255, .28) !important;
+  box-shadow: inset 3px 0 #36a9ff, 0 7px 16px rgba(5, 79, 133, .08) !important;
+  border-radius: 13px !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] main.main-surface {
+  background:
+    linear-gradient(180deg, rgba(3, 8, 20, .34), rgba(3, 8, 20, .76)),
+    var(--dream-skin-art) 68% 8% / cover no-repeat !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] main.main-surface:not(.dream-skin-home-shell) {
+  background:
+    linear-gradient(100deg, rgba(3, 9, 24, .92) 0%, rgba(3, 9, 24, .78) 42%, rgba(3, 9, 24, .44) 72%, rgba(3, 9, 24, .28) 100%),
+    var(--dream-skin-art) 68% center / cover no-repeat !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home > div:first-child > div:first-child > div:first-child {
+  height: 332px !important;
+  min-height: 332px !important;
+  border: 1px solid rgba(130, 233, 255, .52) !important;
+  border-radius: 29px !important;
+  background-color: #061129 !important;
+  background-image:
+    linear-gradient(95deg, rgba(2, 8, 23, .72) 0%, rgba(2, 8, 23, .24) 42%, transparent 64%),
+    linear-gradient(0deg, rgba(3, 9, 24, .36) 0%, transparent 43%),
+    var(--dream-skin-art) !important;
+  background-size: 100% 100%, 100% 100%, cover !important;
+  background-position: center, center, center !important;
+  box-shadow:
+    0 18px 42px rgba(0, 22, 56, .42),
+    0 0 0 5px rgba(54, 169, 255, .05),
+    inset 0 1px rgba(255, 255, 255, .16) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home > div:first-child > div:first-child {
+  flex-basis: 506px !important;
+  min-height: 506px !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home > div:first-child > div:first-child > div:first-child::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 6% 14%, #82e9ff 0 2px, transparent 3px),
+    radial-gradient(circle at 10% 84%, #36a9ff 0 2px, transparent 3px),
+    linear-gradient(90deg, rgba(130, 233, 255, .44), transparent 16%) left 23px top 22px / 165px 1px no-repeat,
+    linear-gradient(90deg, rgba(255, 125, 115, .38), transparent 16%) left 23px bottom 22px / 165px 1px no-repeat;
+  opacity: .9;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home [data-feature="game-source"] {
+  color: #f7fcff !important;
+  text-shadow: 0 3px 18px rgba(0, 18, 48, .8) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home [data-feature="game-source"]::before {
+  color: #82e9ff !important;
+  text-shadow: 0 0 18px rgba(54, 169, 255, .62) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home [data-feature="game-source"]::after {
+  color: rgba(229, 246, 255, .88) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions button {
+  min-height: 136px !important;
+  border: 1px solid rgba(130, 233, 255, .42) !important;
+  border-radius: 28px !important;
+  background:
+    radial-gradient(circle at 50% 4%, rgba(130, 233, 255, .17), transparent 35%),
+    linear-gradient(155deg, rgba(246, 252, 255, .98), rgba(214, 238, 255, .94)) !important;
+  color: #08203a !important;
+  text-shadow: none !important;
+  box-shadow:
+    0 13px 28px rgba(0, 25, 66, .28),
+    inset 0 1px rgba(255, 255, 255, .96),
+    inset 0 -2px rgba(54, 169, 255, .10) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions button:hover {
+  transform: translateY(-5px) scale(1.012) !important;
+  border-color: rgba(54, 169, 255, .82) !important;
+  box-shadow: 0 18px 38px rgba(0, 68, 130, .34), 0 0 0 4px rgba(130, 233, 255, .08) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions button::before {
+  background: linear-gradient(90deg, transparent, #82e9ff 24%, #36a9ff 52%, #82e9ff 78%, transparent) !important;
+  opacity: .76 !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions button::after {
+  content: "" !important;
+  width: 7px !important;
+  height: 7px !important;
+  right: 13px !important;
+  bottom: 10px !important;
+  border: 1px solid rgba(54, 169, 255, .55) !important;
+  border-radius: 50% !important;
+  background: rgba(130, 233, 255, .35) !important;
+  box-shadow: 0 0 9px rgba(54, 169, 255, .38) !important;
+  transform: none !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions button > span:first-child > span:first-child {
+  position: relative !important;
+  width: 54px !important;
+  height: 52px !important;
+  color: #f8fdff !important;
+  background: linear-gradient(155deg, #071529, #020711) !important;
+  border: 3px solid rgba(239, 252, 255, .98) !important;
+  border-radius: 21px 21px 16px 16px !important;
+  box-shadow:
+    0 0 0 6px rgba(54, 169, 255, .12),
+    0 9px 20px rgba(0, 75, 145, .28),
+    inset 0 0 0 1px rgba(54, 169, 255, .24) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions button > span:first-child > span:first-child::before {
+  content: "" !important;
+  position: absolute;
+  left: 12px;
+  top: 15px;
+  width: 11px;
+  height: 15px;
+  border: 0;
+  border-radius: 50%;
+  background: #67e4ff;
+  box-shadow: 0 0 9px rgba(54, 169, 255, .82);
+  transform-origin: center;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions button > span:first-child > span:first-child::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 31px !important;
+  top: 15px !important;
+  right: auto !important;
+  bottom: auto !important;
+  display: block !important;
+  width: 11px !important;
+  height: 15px !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background: #67e4ff !important;
+  box-shadow: 0 0 9px rgba(54, 169, 255, .82) !important;
+  transform-origin: center !important;
+}
+
+/* 1 Explore: open, asymmetric curious LEDs. */
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions div.grid > div:nth-child(1) button > span:first-child > span:first-child::before {
+  width: 12px; height: 16px; left: 11px; top: 14px; transform: rotate(-7deg);
+}
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions div.grid > div:nth-child(1) button > span:first-child > span:first-child::after {
+  width: 9px !important; height: 13px !important; left: 32px !important; top: 16px !important; transform: rotate(7deg) !important;
+}
+
+/* 2 Build: joyful upward chevrons, the signature ASTRO smile-eye read. */
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions div.grid > div:nth-child(2) button > span:first-child > span:first-child::before,
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions div.grid > div:nth-child(2) button > span:first-child > span:first-child::after {
+  width: 14px !important;
+  height: 10px !important;
+  top: 18px !important;
+  border-radius: 0 !important;
+  background: #68f0c3 !important;
+  clip-path: polygon(0 100%, 50% 8%, 100% 100%, 72% 100%, 50% 58%, 28% 100%) !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 5px rgba(104,240,195,.75));
+}
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions div.grid > div:nth-child(2) button > span:first-child > span:first-child::before { left: 9px !important; }
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions div.grid > div:nth-child(2) button > span:first-child > span:first-child::after { left: 31px !important; }
+
+/* 3 Review: narrowed inward focus, not a neutral pair of dots. */
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions div.grid > div:nth-child(3) button > span:first-child > span:first-child::before,
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions div.grid > div:nth-child(3) button > span:first-child > span:first-child::after {
+  width: 15px !important;
+  height: 6px !important;
+  top: 20px !important;
+  border-radius: 8px 8px 5px 5px !important;
+  background: #a9a1ff !important;
+  box-shadow: 0 0 8px rgba(169,161,255,.78) !important;
+}
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions div.grid > div:nth-child(3) button > span:first-child > span:first-child::before { left: 9px !important; transform: rotate(12deg) !important; }
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions div.grid > div:nth-child(3) button > span:first-child > span:first-child::after { left: 31px !important; transform: rotate(-12deg) !important; }
+
+/* 4 Repair: visibly worried downward arcs, softer and more game-like than X eyes. */
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions div.grid > div:nth-child(4) button > span:first-child > span:first-child::before,
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions div.grid > div:nth-child(4) button > span:first-child > span:first-child::after {
+  width: 15px !important;
+  height: 9px !important;
+  top: 18px !important;
+  border: 0 !important;
+  border-bottom: 4px solid #ff8f87 !important;
+  border-radius: 0 0 14px 14px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 4px rgba(255,143,135,.62));
+}
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions div.grid > div:nth-child(4) button > span:first-child > span:first-child::before { left: 9px !important; transform: rotate(11deg) !important; }
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions div.grid > div:nth-child(4) button > span:first-child > span:first-child::after { left: 31px !important; transform: rotate(-11deg) !important; }
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions button > span:first-child > span:first-child svg {
+  display: none !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions button > span:last-child,
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions button > span:last-child * {
+  color: #08203a !important;
+  font-family: "SF Pro Rounded", "SF Pro Display", "PingFang SC", sans-serif !important;
+  font-weight: 680 !important;
+  letter-spacing: .015em !important;
+  text-shadow: none !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .composer-surface-chrome {
+  border: 1px solid rgba(130, 233, 255, .48) !important;
+  border-radius: 29px !important;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(54, 169, 255, .16), transparent 30%),
+    linear-gradient(145deg, rgba(7, 23, 47, .94), rgba(4, 13, 31, .94)) !important;
+  box-shadow: 0 15px 38px rgba(0, 18, 48, .42), inset 0 1px rgba(255, 255, 255, .08) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .composer-surface-chrome::before {
+  content: "◉";
+  color: #04101f;
+  background: linear-gradient(145deg, #dff8ff, #52c7ff) !important;
+  border-color: rgba(255, 255, 255, .9) !important;
+  box-shadow: 0 0 18px rgba(54, 169, 255, .58) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .composer-surface-chrome::after {
+  content: "插入光盘 · 任务开始" !important;
+  color: rgba(130, 233, 255, .66) !important;
+  font-family: "SF Mono", "Menlo", monospace !important;
+  font-style: normal !important;
+  letter-spacing: .09em !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] div:has(> .horizontal-scroll-fade-mask .group\/project-selector) {
+  border-color: rgba(130, 233, 255, .26) !important;
+  background: linear-gradient(180deg, rgba(8, 27, 51, .94), rgba(5, 17, 37, .94)) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .group\/project-selector > button {
+  border-color: rgba(130, 233, 255, .38) !important;
+  background: linear-gradient(135deg, rgba(235, 248, 255, .14), rgba(54, 169, 255, .12)) !important;
+  color: #eaf8ff !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .group\/project-selector > button svg,
+html.codex-dream-skin[data-dream-theme="astro-bot"] div:has(> .horizontal-scroll-fade-mask .group\/project-selector) svg {
+  color: #82e9ff !important;
+  filter: drop-shadow(0 0 7px rgba(54, 169, 255, .44));
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] main.main-surface > header button {
+  border: 1px solid transparent;
+  border-radius: 12px !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] main.main-surface > header button:hover {
+  border-color: rgba(130, 233, 255, .28) !important;
+  background: rgba(54, 169, 255, .11) !important;
+  box-shadow: 0 0 16px rgba(54, 169, 255, .12) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] main.main-surface > header button svg,
+html.codex-dream-skin[data-dream-theme="astro-bot"] .composer-surface-chrome button svg {
+  color: #82e9ff !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .composer-surface-chrome button:not([class~="bg-token-foreground"]) {
+  border-radius: 12px !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .composer-surface-chrome button:not([class~="bg-token-foreground"]):hover {
+  background: rgba(54, 169, 255, .14) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] [data-message-author-role] button,
+html.codex-dream-skin[data-dream-theme="astro-bot"] article button {
+  border-radius: 11px !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] [data-message-author-role] button:hover,
+html.codex-dream-skin[data-dream-theme="astro-bot"] article button:hover {
+  background: rgba(54, 169, 255, .12) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] button[class~="bg-token-foreground"] {
+  background: linear-gradient(145deg, #7ee7ff, #2799ef) !important;
+  color: #03101f !important;
+  box-shadow: 0 7px 18px rgba(54, 169, 255, .38) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-brand::before {
+  content: none !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-portal-mark {
+  width: 41px !important;
+  height: 30px !important;
+  border: 3px solid rgba(236, 250, 255, .98) !important;
+  border-radius: 14px 14px 11px 11px !important;
+  color: transparent !important;
+  font-size: 0 !important;
+  background:
+    radial-gradient(ellipse at 34% 51%, #82e9ff 0 2px, #36a9ff 3px, transparent 4px),
+    radial-gradient(ellipse at 66% 51%, #82e9ff 0 2px, #36a9ff 3px, transparent 4px),
+    linear-gradient(155deg, #071529, #020711) !important;
+  box-shadow:
+    0 0 0 2px rgba(54, 169, 255, .16),
+    0 0 17px rgba(54, 169, 255, .42),
+    inset 0 1px rgba(255, 255, 255, .12) !important;
+  transform: none !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-decoration {
+  width: 112px !important;
+  z-index: 8 !important;
+  opacity: .98;
+  filter: drop-shadow(0 18px 22px rgba(0, 10, 28, .72)) drop-shadow(0 0 10px rgba(82, 199, 255, .24)) !important;
+  animation: astro-disc-hover 5.8s ease-in-out infinite;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-decoration::before {
+  content: none !important;
+  display: none !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-decoration::after {
+  content: none !important;
+  display: none !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-quote {
+  right: 126px !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] #codex-dream-skin-chrome.dream-skin-home-shell .dream-skin-decoration {
+  display: block !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] #codex-dream-skin-chrome .dream-skin-decoration {
+  display: block !important;
+}
+
+@keyframes astro-disc-hover {
+  0%, 100% { transform: rotate(7deg) translateY(0); }
+  50% { transform: rotate(10deg) translateY(-7px); }
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-portal-mark::before {
+  content: "" !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-brand b {
+  color: #f4fbff !important;
+  font-family: "SF Pro Rounded", "SF Pro Display", "PingFang SC", sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 780 !important;
+  letter-spacing: .08em !important;
+  text-shadow: 0 0 15px rgba(54, 169, 255, .34) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-brand small {
+  color: #82e9ff !important;
+  font-weight: 800 !important;
+  letter-spacing: .22em !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-status i {
+  border-radius: 50% !important;
+  background: #82e9ff !important;
+  box-shadow: 0 0 14px rgba(54, 169, 255, .78) !important;
+  transform: none !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-status {
+  color: #dff8ff !important;
+  text-shadow: 0 0 14px rgba(54, 169, 255, .44) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-quote {
+  color: rgba(130, 233, 255, .82) !important;
+  text-shadow: 0 0 15px rgba(54, 169, 255, .34) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-particles i {
+  background: #82e9ff !important;
+  box-shadow: 0 0 12px rgba(54, 169, 255, .68) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-orbit {
+  border-color: rgba(130, 233, 255, .34) !important;
+  box-shadow: 0 0 12px rgba(54, 169, 255, .16) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-switcher {
+  border: 1px solid rgba(130, 233, 255, .62) !important;
+  border-radius: 999px !important;
+  background:
+    radial-gradient(circle at 19px 50%, #82e9ff 0 2px, transparent 3px),
+    radial-gradient(circle at 27px 50%, #82e9ff 0 2px, transparent 3px),
+    linear-gradient(135deg, rgba(7, 26, 49, .96), rgba(17, 83, 128, .88)) !important;
+  color: #eefbff !important;
+  box-shadow: 0 0 18px rgba(54, 169, 255, .18), inset 0 1px rgba(255, 255, 255, .12) !important;
+  padding-left: 38px !important;
+  text-shadow: 0 0 10px rgba(54, 169, 255, .38) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-switcher:hover {
+  border-color: #82e9ff !important;
+  background:
+    radial-gradient(circle at 19px 50%, #fff 0 2px, transparent 3px),
+    radial-gradient(circle at 27px 50%, #fff 0 2px, transparent 3px),
+    linear-gradient(135deg, #0a3155, #148fd9) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] article {
+  border: 1px solid rgba(130, 233, 255, .12);
+  background: rgba(5, 16, 35, .66);
+  box-shadow: 0 12px 26px rgba(0, 12, 34, .24);
+  backdrop-filter: blur(12px) saturate(116%);
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel [data-app-action-sidebar-project-row] {
+  min-height: 39px !important;
+  margin: 2px 0 !important;
+  border: 1px solid transparent !important;
+  border-radius: 13px !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel [data-app-action-sidebar-project-row]:hover {
+  border-color: rgba(54, 169, 255, .24) !important;
+  background: linear-gradient(90deg, rgba(54, 169, 255, .13), rgba(130, 233, 255, .05)) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel [data-app-action-sidebar-thread-active="true"] {
+  padding-left: 39px !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel [data-app-action-sidebar-thread-active="true"]::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgba(244, 253, 255, .98);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #dff8ff 0 2px, #36a9ff 2.5px 3.8px, transparent 4.2px),
+    radial-gradient(circle at 35% 32%, rgba(255,255,255,.92) 0 1px, transparent 1.8px),
+    conic-gradient(from 25deg, #72e8ff, #176dd2, #9b7cff, #58e7ff, #0c4aa2, #72e8ff);
+  box-shadow: 0 0 0 2px rgba(54, 169, 255, .2), 0 0 12px rgba(54, 169, 255, .45);
+  transform: translateY(-50%);
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel [data-sidebar-project-drop-zone="project-icon"] {
+  width: 34px !important;
+  height: 29px !important;
+  min-width: 34px !important;
+  margin: 0 3px 0 0 !important;
+  border: 2px solid rgba(235, 250, 255, .96) !important;
+  border-radius: 13px 13px 10px 10px !important;
+  color: transparent !important;
+  background:
+    radial-gradient(ellipse at 36% 51%, #e9fdff 0 1.4px, #59d7ff 1.8px 2.8px, transparent 3.5px),
+    radial-gradient(ellipse at 64% 51%, #e9fdff 0 1.4px, #59d7ff 1.8px 2.8px, transparent 3.5px),
+    linear-gradient(155deg, #071529, #020711) !important;
+  box-shadow:
+    0 0 0 2px rgba(54, 169, 255, .18),
+    0 6px 13px rgba(0, 67, 121, .2),
+    inset 0 1px rgba(255, 255, 255, .14) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel [data-sidebar-project-drop-zone="project-icon"] > svg {
+  display: none !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel [data-app-action-sidebar-section-toggle] {
+  color: #45677f !important;
+  letter-spacing: .035em !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel [data-app-action-sidebar-section-toggle]::before {
+  content: "";
+  width: 15px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #36a9ff, #82e9ff);
+  box-shadow: 0 0 8px rgba(54, 169, 255, .45);
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel button[aria-label*="归档"] > svg,
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel button[aria-label*="置顶"] > svg {
+  color: #249be8 !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel button[aria-label*="归档"]:hover,
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel button[aria-label*="置顶"]:hover {
+  background: rgba(54, 169, 255, .13) !important;
+  box-shadow: 0 0 10px rgba(54, 169, 255, .16) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel > div:last-child {
+  border-top-color: rgba(54, 169, 255, .18) !important;
+  background: linear-gradient(180deg, rgba(245, 252, 255, .22), rgba(209, 239, 255, .64)) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel > div:last-child button svg {
+  color: #087bd0 !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel > div:last-child img,
+html.codex-dream-skin[data-dream-theme="astro-bot"] aside.app-shell-left-panel > div:last-child [class*="avatar"] {
+  border: 2px solid rgba(255, 255, 255, .96) !important;
+  box-shadow: 0 0 0 2px rgba(54, 169, 255, .34), 0 5px 13px rgba(0, 78, 145, .18) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] [role="dialog"],
+html.codex-dream-skin[data-dream-theme="astro-bot"] [role="menu"] {
+  border-color: rgba(130, 233, 255, .35) !important;
+  background: linear-gradient(155deg, rgba(248, 253, 255, .98), rgba(218, 241, 255, .98)) !important;
+  box-shadow: 0 20px 55px rgba(0, 35, 75, .28), inset 0 1px rgba(255, 255, 255, .9) !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] [role="dialog"] *,
+html.codex-dream-skin[data-dream-theme="astro-bot"] [role="menu"] * {
+  color: #08203a !important;
+  text-shadow: none !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] [role="dialog"] svg,
+html.codex-dream-skin[data-dream-theme="astro-bot"] [role="menu"] svg {
+  color: #087bd0 !important;
+}
+
+html.codex-dream-skin[data-dream-theme="astro-bot"] [role="menuitem"]:hover,
+html.codex-dream-skin[data-dream-theme="astro-bot"] [role="option"]:hover {
+  background: rgba(54, 169, 255, .14) !important;
+}
+
+@media (max-width: 900px) {
+  html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home > div:first-child > div:first-child {
+    flex-basis: 396px !important;
+    min-height: 396px !important;
+  }
+
+  html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home > div:first-child > div:first-child > div:first-child {
+    height: 224px !important;
+    min-height: 224px !important;
+  }
+
+  html.codex-dream-skin[data-dream-theme="astro-bot"] .dream-skin-home .group\/home-suggestions button {
+    min-height: 118px !important;
+    border-radius: 22px !important;
+  }
+}

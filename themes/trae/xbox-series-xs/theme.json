@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "xbox-series-xs",
+  "name": "XBOX SERIES X|S · POWER LAB",
+  "visualStyle": "xbox-series-xs",
+  "brandSubtitle": "TRAE WORK · X|S MODE",
+  "tagline": "让每一个任务，快速进入下一世代。",
+  "statusText": "QUICK RESUME · READY",
+  "quote": "PLAY · CREATE · SHIP",
+  "image": "xbox-series-xs-hero.png",
+  "colors": {
+    "background": "#050706",
+    "panel": "#101411",
+    "panelAlt": "#182019",
+    "accent": "#9bf00b",
+    "accentAlt": "#52b043",
+    "secondary": "#107c10",
+    "highlight": "#ffffff",
+    "text": "#f5f7f5",
+    "muted": "#a7b0a9",
+    "line": "rgba(155, 240, 11, .28)"
+  }
+}

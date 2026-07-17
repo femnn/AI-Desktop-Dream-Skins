@@ -1,0 +1,2364 @@
+:root.trae-dream-skin {
+  color-scheme: light;
+  --tds-bg: #dff5ff;
+  --tds-panel: #fffef6;
+  --tds-panel-2: #fff6d7;
+  --tds-accent: #e52521;
+  --tds-accent-2: #ff4d45;
+  --tds-secondary: #049cd8;
+  --tds-highlight: #e52521;
+  --tds-coin: #fbd000;
+  --tds-grass: #43b047;
+  --tds-brick: #c96d31;
+  --tds-text: #183153;
+  --tds-muted: #56708f;
+  --tds-line: rgba(229, 37, 33, .26);
+  --tds-glass: rgba(255, 254, 246, .78);
+  --tds-glass-strong: rgba(255, 255, 250, .93);
+  --tds-shadow: rgba(24, 49, 83, .17);
+}
+
+:root.trae-dream-skin[data-trae-dream-shell="dark"] {
+  color-scheme: dark;
+  --tds-bg: #071735;
+  --tds-panel: #101f3c;
+  --tds-panel-2: #17294c;
+  --tds-text: #f6fbff;
+  --tds-muted: #a9c1df;
+  --tds-line: rgba(251, 208, 0, .25);
+  --tds-glass: rgba(8, 24, 53, .81);
+  --tds-glass-strong: rgba(13, 31, 64, .94);
+  --tds-shadow: rgba(0, 0, 0, .38);
+}
+
+html.trae-dream-skin,
+html.trae-dream-skin body {
+  background:
+    radial-gradient(ellipse at 84% 4%, rgba(255, 255, 255, .90) 0 6%, transparent 6.5%),
+    radial-gradient(ellipse at 78% 8%, rgba(255, 255, 255, .72) 0 5%, transparent 5.5%),
+    linear-gradient(180deg, color-mix(in srgb, var(--tds-secondary) 34%, var(--tds-bg)), var(--tds-bg)),
+    var(--tds-bg) !important;
+  color: var(--tds-text) !important;
+}
+
+html.trae-dream-skin body {
+  font-family: Inter, "SF Pro Text", "PingFang SC", "Microsoft YaHei UI", system-ui, sans-serif !important;
+}
+
+html.trae-dream-skin body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .30;
+  background-image:
+    radial-gradient(ellipse, rgba(255, 255, 255, .82) 0 8px, transparent 9px),
+    radial-gradient(ellipse, rgba(255, 255, 255, .72) 0 12px, transparent 13px);
+  background-position: 14px 22px, 58px 63px;
+  background-size: 132px 110px, 181px 151px;
+}
+
+html.trae-dream-skin #root,
+html.trae-dream-skin #solo-lite-root {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+/* Native task sidebar */
+html.trae-dream-skin .tds-sidebar {
+  background:
+    linear-gradient(90deg, var(--tds-accent) 0 5px, transparent 5px),
+    radial-gradient(circle at 8% 5%, color-mix(in srgb, var(--tds-coin) 23%, transparent), transparent 28%),
+    linear-gradient(180deg, var(--tds-glass-strong) 0 68%, color-mix(in srgb, var(--tds-secondary) 8%, var(--tds-glass)) 100%) !important;
+  border: 1px solid var(--tds-line) !important;
+  border-left: 0 !important;
+  border-radius: 0 24px 24px 0 !important;
+  box-shadow:
+    15px 0 44px var(--tds-shadow),
+    inset -1px 0 rgba(255, 255, 255, .44) !important;
+  backdrop-filter: blur(24px) saturate(132%) !important;
+  color: var(--tds-text) !important;
+  overflow: hidden !important;
+}
+
+html.trae-dream-skin .tds-sidebar .task-list-base-header {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--tds-glass-strong) 94%, transparent), transparent) !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--tds-line) 74%, transparent);
+}
+
+html.trae-dream-skin .tds-sidebar button,
+html.trae-dream-skin .tds-sidebar [role="button"] {
+  color: var(--tds-text) !important;
+  transition:
+    transform .16s ease,
+    background-color .16s ease,
+    border-color .16s ease,
+    box-shadow .16s ease !important;
+}
+
+html.trae-dream-skin .tds-sidebar button:hover,
+html.trae-dream-skin .tds-sidebar [role="button"]:hover {
+  background: color-mix(in srgb, var(--tds-coin) 18%, transparent) !important;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--tds-brick) 24%, transparent);
+}
+
+html.trae-dream-skin .tds-sidebar .task-list-new-task-item {
+  border: 1px solid transparent !important;
+  border-radius: 11px !important;
+}
+
+html.trae-dream-skin .tds-sidebar .task-list-new-task-item:hover {
+  border-color: color-mix(in srgb, var(--tds-accent) 24%, transparent) !important;
+  transform: translateX(1px);
+}
+
+html.trae-dream-skin .tds-sidebar .task-list-row {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  transition:
+    background-color .16s ease,
+    border-color .16s ease,
+    transform .16s ease !important;
+}
+
+html.trae-dream-skin .tds-sidebar .task-list-row:hover {
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--tds-coin) 20%, transparent),
+    color-mix(in srgb, var(--tds-secondary) 9%, transparent)
+  ) !important;
+  border-color: color-mix(in srgb, var(--tds-brick) 30%, transparent);
+  transform: translateX(1px);
+}
+
+html.trae-dream-skin .tds-sidebar .task-list-group-name,
+html.trae-dream-skin .tds-sidebar .task-list-heading-text {
+  color: var(--tds-muted) !important;
+  font-weight: 650 !important;
+  letter-spacing: .015em;
+}
+
+html.trae-dream-skin .tds-sidebar .solo-common-button[class*="primary"],
+html.trae-dream-skin .tds-sidebar button[aria-pressed="true"] {
+  background: linear-gradient(135deg, var(--tds-secondary), #087bb5) !important;
+  color: white !important;
+  box-shadow:
+    0 7px 18px color-mix(in srgb, var(--tds-secondary) 30%, transparent),
+    inset 0 -3px rgba(0, 0, 0, .14) !important;
+}
+
+/* Main native panel: a playable-looking world built from CSS around the supplied character. */
+html.trae-dream-skin .tds-main {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden !important;
+  border: 1px solid color-mix(in srgb, var(--tds-line) 92%, transparent) !important;
+  border-right: 0 !important;
+  border-radius: 24px 0 0 24px !important;
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--tds-panel) 98%, transparent) 0%,
+      color-mix(in srgb, var(--tds-panel) 94%, transparent) 35%,
+      color-mix(in srgb, var(--tds-panel) 68%, transparent) 54%,
+      transparent 73%
+    ),
+    var(--trae-dream-art) 86% 47% / auto min(65%, 430px) no-repeat,
+    radial-gradient(circle at 86% 47%, #020202 0 20.5%, #ffffff 20.7% 21.4%, var(--tds-secondary) 21.6% 22.8%, transparent 23%),
+    radial-gradient(ellipse at 75% 17%, rgba(255, 255, 255, .96) 0 5.5%, transparent 5.8%),
+    radial-gradient(ellipse at 81% 18%, rgba(255, 255, 255, .94) 0 7%, transparent 7.3%),
+    radial-gradient(ellipse at 92% 13%, rgba(255, 255, 255, .86) 0 6%, transparent 6.3%),
+    radial-gradient(ellipse at 73% 94%, #43b047 0 18%, transparent 18.3%),
+    radial-gradient(ellipse at 96% 94%, #63bf4a 0 20%, transparent 20.3%),
+    linear-gradient(180deg, #69c9ff 0 72%, #d9f8ff 72% 82%, #7dcf55 82% 100%) !important;
+  box-shadow:
+    -13px 0 42px var(--tds-shadow),
+    inset 0 1px rgba(255, 255, 255, .52) !important;
+}
+
+:root.trae-dream-skin[data-trae-dream-shell="dark"] .tds-main {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(11, 28, 56, .99) 0%,
+      rgba(11, 28, 56, .93) 37%,
+      rgba(11, 28, 56, .66) 56%,
+      transparent 75%
+    ),
+    var(--trae-dream-art) 86% 47% / auto min(65%, 430px) no-repeat,
+    radial-gradient(circle at 86% 47%, #020202 0 20.5%, #fbd000 20.7% 21.4%, #e52521 21.6% 22.8%, transparent 23%),
+    radial-gradient(circle at 86% 11%, #fff4b8 0 3%, rgba(251, 208, 0, .24) 3.2% 8%, transparent 8.3%),
+    radial-gradient(circle at 72% 22%, white 0 1px, transparent 1.5px),
+    radial-gradient(circle at 95% 18%, white 0 1.5px, transparent 2px),
+    radial-gradient(ellipse at 76% 94%, #194b34 0 19%, transparent 19.3%),
+    linear-gradient(180deg, #071735 0 74%, #17294c 74% 82%, #24563c 82% 100%) !important;
+}
+
+html.trae-dream-skin .tds-main::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, #168934 0 16%, #45b851 16% 72%, #0d7a2a 72% 100%) 95% 73% / 92px 22px no-repeat,
+    linear-gradient(90deg, #0d7a2a 0 12%, #36a847 12% 76%, #086422 76% 100%) 95% 100% / 70px 27% no-repeat,
+    repeating-linear-gradient(90deg, #9d4c25 0 2px, #d58242 2px 27px, #8a3d20 27px 29px) left bottom / 100% 9px no-repeat;
+  opacity: .88;
+}
+
+html.trae-dream-skin .tds-main > .panel-content {
+  position: relative;
+  z-index: 2;
+  background: transparent !important;
+}
+
+html.trae-dream-skin .tds-main .initial-chat-panel {
+  background: transparent !important;
+}
+
+html.trae-dream-skin .tds-main .initial-chat-panel-content {
+  position: relative;
+  z-index: 3;
+}
+
+/* Native title and subtitle */
+html.trae-dream-skin .tds-home [class*="traeWorkTitle-"] {
+  position: relative;
+  color: var(--tds-text) !important;
+  font-family: ui-rounded, "Arial Rounded MT Bold", "SF Pro Rounded", "PingFang SC", system-ui, sans-serif !important;
+  font-weight: 850 !important;
+  letter-spacing: -.025em;
+  text-shadow:
+    0 1px rgba(255, 255, 255, .74),
+    0 12px 30px color-mix(in srgb, var(--tds-secondary) 16%, transparent);
+}
+
+html.trae-dream-skin .tds-home [class*="traeWorkTitle-"]::before {
+  content: var(--tds-name, "TRAE Dream Skin");
+  display: block;
+  margin-bottom: 9px;
+  color: var(--tds-accent);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  -webkit-text-stroke: .15px color-mix(in srgb, var(--tds-accent) 70%, black);
+}
+
+html.trae-dream-skin .tds-home [class*="traeWorkTitle-"]::after {
+  content: var(--tds-tagline, "让灵感在你的 AI 工作台里发光。");
+  display: block;
+  margin-top: 13px;
+  color: var(--tds-muted);
+  font-size: 13px;
+  font-weight: 520;
+  line-height: 1.55;
+  letter-spacing: .015em;
+}
+
+/* Native composer */
+html.trae-dream-skin .messageInputContainer.tds-composer,
+html.trae-dream-skin .messageInputContainer:has(.tds-composer) {
+  position: relative !important;
+  overflow: visible !important;
+  border: 2px solid color-mix(in srgb, var(--tds-coin) 78%, var(--tds-brick)) !important;
+  border-radius: 18px !important;
+  background:
+    radial-gradient(circle at 92% 10%, color-mix(in srgb, var(--tds-coin) 15%, transparent), transparent 25%),
+    linear-gradient(145deg, var(--tds-glass-strong), var(--tds-glass)) !important;
+  box-shadow:
+    0 18px 44px color-mix(in srgb, var(--tds-shadow) 92%, transparent),
+    0 0 0 4px color-mix(in srgb, var(--tds-accent) 7%, transparent),
+    inset 0 1px rgba(255, 255, 255, .62) !important;
+  backdrop-filter: blur(22px) saturate(138%) !important;
+}
+
+html.trae-dream-skin .messageInputContainer::before {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: -5px;
+  z-index: 4;
+  width: 42px;
+  height: 8px;
+  pointer-events: none;
+  border-radius: 2px;
+  background: repeating-linear-gradient(90deg, var(--tds-brick) 0 9px, #f29a4a 9px 18px);
+  box-shadow: 0 2px 0 #8a3d20;
+}
+
+html.trae-dream-skin .chat-input-v2-container,
+html.trae-dream-skin .messageInputEditorWrapper {
+  background: transparent !important;
+}
+
+html.trae-dream-skin .chat-input-v2-input-box-editable,
+html.trae-dream-skin .chat-input-v2-placeholder {
+  color: var(--tds-text) !important;
+  caret-color: var(--tds-secondary) !important;
+}
+
+html.trae-dream-skin .chat-input-v2-placeholder {
+  color: color-mix(in srgb, var(--tds-muted) 72%, transparent) !important;
+}
+
+html.trae-dream-skin .chat-input-v2-send-button {
+  background: linear-gradient(145deg, var(--tds-secondary), #0577b2) !important;
+  color: white !important;
+  box-shadow:
+    0 7px 18px color-mix(in srgb, var(--tds-secondary) 34%, transparent),
+    inset 0 1px rgba(255, 255, 255, .34),
+    inset 0 -3px rgba(0, 0, 0, .16) !important;
+  transition: transform .16s ease, box-shadow .16s ease !important;
+}
+
+html.trae-dream-skin .chat-input-v2-send-button:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow:
+    0 10px 24px color-mix(in srgb, var(--tds-secondary) 42%, transparent),
+    inset 0 1px rgba(255, 255, 255, .42) !important;
+}
+
+html.trae-dream-skin .inputBarContainer-CLmEv6 {
+  border-top: 1px solid color-mix(in srgb, var(--tds-line) 80%, transparent);
+  background: color-mix(in srgb, var(--tds-panel-2) 68%, transparent) !important;
+}
+
+/* Native quick actions */
+html.trae-dream-skin .showcase-content-wrapper {
+  position: relative;
+  z-index: 3;
+}
+
+html.trae-dream-skin .showcase-content-wrapper button,
+html.trae-dream-skin .showcase-content-wrapper [role="button"] {
+  border: 2px solid color-mix(in srgb, var(--tds-brick) 52%, transparent) !important;
+  border-radius: 8px !important;
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--tds-coin) 32%, var(--tds-glass-strong)), var(--tds-glass)) !important;
+  color: var(--tds-text) !important;
+  box-shadow:
+    0 8px 22px color-mix(in srgb, var(--tds-shadow) 72%, transparent),
+    inset 0 1px rgba(255, 255, 255, .64),
+    inset 0 -3px color-mix(in srgb, var(--tds-brick) 16%, transparent) !important;
+  backdrop-filter: blur(16px) saturate(125%);
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    box-shadow .18s ease !important;
+}
+
+html.trae-dream-skin .showcase-content-wrapper button:hover,
+html.trae-dream-skin .showcase-content-wrapper [role="button"]:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--tds-accent) 58%, transparent) !important;
+  box-shadow:
+    0 13px 28px color-mix(in srgb, var(--tds-shadow) 88%, transparent),
+    0 0 0 3px color-mix(in srgb, var(--tds-accent) 7%, transparent) !important;
+}
+
+/* Task pages keep their native layout over a quieter glass layer. */
+html.trae-dream-skin .tds-main:not(.tds-home-shell) .panel-content {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--tds-panel) 76%, transparent),
+      color-mix(in srgb, var(--tds-panel) 45%, transparent)
+    ) !important;
+  backdrop-filter: blur(10px) saturate(112%);
+}
+
+html.trae-dream-skin .tds-main:not(.tds-home-shell) [class*="message"],
+html.trae-dream-skin .tds-main:not(.tds-home-shell) [class*="artifact"] {
+  text-shadow: 0 1px 12px color-mix(in srgb, var(--tds-shadow) 28%, transparent);
+}
+
+/* Update and portal layers stay above decoration. */
+html.trae-dream-skin .soloUpdateStatusWrapper,
+html.trae-dream-skin .ras-portal-container,
+html.trae-dream-skin .core-model-select-portal,
+html.trae-dream-skin .icube-tooltip-container,
+html.trae-dream-skin icube-toast-container {
+  z-index: 1000 !important;
+}
+
+html.trae-dream-skin .updateAlert {
+  border: 1px solid var(--tds-line) !important;
+  background: var(--tds-glass-strong) !important;
+  color: var(--tds-text) !important;
+  box-shadow: 0 14px 34px var(--tds-shadow) !important;
+  backdrop-filter: blur(20px) saturate(130%);
+}
+
+/* Decorative chrome: all pointer events are disabled. */
+#trae-dream-skin-chrome {
+  position: fixed;
+  z-index: 18;
+  pointer-events: none !important;
+  overflow: hidden;
+  border-radius: 24px 0 0 24px;
+}
+
+#trae-dream-skin-chrome,
+#trae-dream-skin-chrome * {
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+.tds-brand {
+  position: absolute;
+  left: 28px;
+  top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--tds-text);
+  opacity: .92;
+}
+
+.tds-brand-mark {
+  position: relative;
+  width: 31px;
+  height: 31px;
+  border: 2px solid #b66d00;
+  border-radius: 7px;
+  background: linear-gradient(145deg, #ffe45b, var(--tds-coin));
+  box-shadow:
+    0 7px 0 rgba(122, 70, 0, .20),
+    0 12px 22px color-mix(in srgb, var(--tds-shadow) 72%, transparent),
+    inset 0 2px rgba(255, 255, 255, .78);
+}
+
+.tds-brand-mark::before {
+  content: "?";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: white;
+  font: 900 22px/1 ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif;
+  text-shadow: 0 2px #a86200;
+  transform: translate(-50%, -53%);
+}
+
+.tds-brand-mark::after,
+.tds-brand-mark i {
+  display: none;
+}
+
+.tds-brand b {
+  display: block;
+  color: var(--tds-accent);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: .04em;
+  text-shadow: 0 1px rgba(255, 255, 255, .55);
+}
+
+.tds-brand small {
+  display: block;
+  margin-top: 2px;
+  color: var(--tds-muted);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: .17em;
+}
+
+.tds-status {
+  position: absolute;
+  right: 28px;
+  top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--tds-muted);
+  font: 700 9px/1 ui-monospace, "SFMono-Regular", Menlo, monospace;
+  letter-spacing: .15em;
+}
+
+.tds-status i {
+  width: 8px;
+  height: 11px;
+  border: 2px solid #b66d00;
+  border-radius: 50%;
+  background: var(--tds-coin);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--tds-coin) 66%, transparent);
+  animation: tds-pulse 2.4s ease-in-out infinite;
+}
+
+.tds-quote {
+  position: absolute;
+  right: 33px;
+  bottom: 30px;
+  display: none;
+  color: var(--tds-coin);
+  font: 900 italic 14px/1.2 ui-rounded, "Arial Rounded MT Bold", "SF Pro Rounded", system-ui, sans-serif;
+  letter-spacing: .12em;
+  -webkit-text-stroke: .5px #9c5b00;
+  text-shadow: 0 2px #9c5b00, 0 0 18px rgba(255, 255, 255, .55);
+}
+
+#trae-dream-skin-chrome.tds-home-shell .tds-quote {
+  display: block;
+}
+
+.tds-orbit {
+  position: absolute;
+  right: 7.5%;
+  top: 17%;
+  width: min(390px, 28vw);
+  aspect-ratio: 1;
+  border: 2px dashed color-mix(in srgb, var(--tds-coin) 34%, transparent);
+  border-radius: 50%;
+  opacity: .35;
+  transform: perspective(700px) rotateX(68deg) rotateZ(-8deg);
+  animation: tds-orbit 18s linear infinite;
+}
+
+.tds-orbit i {
+  position: absolute;
+  width: 8px;
+  height: 13px;
+  border: 2px solid #b66d00;
+  border-radius: 50%;
+  background: var(--tds-coin);
+  box-shadow: 0 0 14px 3px color-mix(in srgb, var(--tds-coin) 38%, transparent);
+}
+
+.tds-orbit i:nth-child(1) { left: 5%; top: 48%; }
+.tds-orbit i:nth-child(2) { right: 11%; top: 18%; background: #fff27a; }
+.tds-orbit i:nth-child(3) { left: 46%; bottom: -3px; }
+
+.tds-particles {
+  position: absolute;
+  inset: 72px 0 0;
+  opacity: .62;
+}
+
+.tds-particles i {
+  position: absolute;
+  width: 8px;
+  height: 13px;
+  border: 2px solid #b66d00;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #e5a800, #fff27a 48%, #e5a800 52%);
+  box-shadow: 0 0 11px 2px color-mix(in srgb, var(--tds-coin) 34%, transparent);
+  animation: tds-float 5.4s ease-in-out infinite;
+}
+
+.tds-particles i:nth-child(1) { left: 9%; top: 18%; }
+.tds-particles i:nth-child(2) { left: 31%; top: 8%; animation-delay: -.8s; }
+.tds-particles i:nth-child(3) { left: 54%; top: 20%; animation-delay: -1.6s; }
+.tds-particles i:nth-child(4) { left: 76%; top: 11%; animation-delay: -2.4s; }
+.tds-particles i:nth-child(5) { left: 91%; top: 33%; animation-delay: -3.2s; }
+.tds-particles i:nth-child(6) { left: 63%; top: 69%; animation-delay: -1.2s; }
+.tds-particles i:nth-child(7) { left: 22%; top: 77%; animation-delay: -2.1s; }
+.tds-particles i:nth-child(8) { left: 87%; top: 81%; animation-delay: -3.8s; }
+
+.tds-scanline {
+  position: absolute;
+  left: 62%;
+  right: 0;
+  bottom: 0;
+  height: 8px;
+  opacity: .74;
+  background: repeating-linear-gradient(90deg, #9d4c25 0 2px, #d58242 2px 26px, #8a3d20 26px 28px);
+  box-shadow: 0 -2px #8a3d20;
+}
+
+html.trae-dream-skin * {
+  scrollbar-color: color-mix(in srgb, var(--tds-accent) 36%, transparent) transparent;
+}
+
+@keyframes tds-pulse {
+  0%, 100% { opacity: .65; transform: scale(.9); }
+  50% { opacity: 1; transform: scale(1.16); }
+}
+
+@keyframes tds-float {
+  0%, 100% { transform: translateY(0); opacity: .44; }
+  50% { transform: translateY(-12px); opacity: 1; }
+}
+
+@keyframes tds-orbit {
+  from { transform: perspective(700px) rotateX(68deg) rotateZ(-8deg); }
+  to { transform: perspective(700px) rotateX(68deg) rotateZ(352deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #trae-dream-skin-chrome *,
+  html.trae-dream-skin * {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .001ms !important;
+  }
+}
+
+@media (max-width: 920px) {
+  .tds-brand small,
+  .tds-status span,
+  .tds-quote {
+    display: none !important;
+  }
+
+  html.trae-dream-skin .tds-main {
+    background:
+      linear-gradient(90deg, color-mix(in srgb, var(--tds-panel) 96%, transparent), color-mix(in srgb, var(--tds-panel) 66%, transparent) 63%, transparent),
+      var(--trae-dream-art) 88% 49% / auto 54% no-repeat,
+      radial-gradient(circle at 88% 49%, #020202 0 18%, #ffffff 18.3% 19%, var(--tds-secondary) 19.3% 20.3%, transparent 20.6%),
+      linear-gradient(180deg, #69c9ff 0 78%, #7dcf55 78% 100%) !important;
+  }
+}
+
+/* Classic 8-bit preset: keeps the supplied world art intact and makes native
+   TRAE controls read like solid game UI instead of modern glass panels. */
+:root.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] {
+  color-scheme: light;
+  --tds-bg: #758df1;
+  --tds-panel: #fff8db;
+  --tds-panel-2: #ffd080;
+  --tds-accent: #e86f25;
+  --tds-accent-2: #ff9847;
+  --tds-secondary: #2fba16;
+  --tds-highlight: #ffb34d;
+  --tds-coin: #ffb34d;
+  --tds-grass: #2fba16;
+  --tds-brick: #e86f25;
+  --tds-text: #141414;
+  --tds-muted: #484848;
+  --tds-line: rgba(20, 20, 20, .52);
+  --tds-glass: rgba(255, 248, 219, .90);
+  --tds-glass-strong: rgba(255, 252, 232, .97);
+  --tds-shadow: rgba(20, 20, 20, .34);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"],
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] body {
+  background: #758df1 !important;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, monospace !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] body::before {
+  display: none;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-main {
+  border: 4px solid #141414 !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(90deg, rgba(117, 141, 241, .16), rgba(117, 141, 241, .02)),
+    var(--trae-dream-art) center / cover no-repeat !important;
+  box-shadow:
+    -8px 0 0 rgba(255, 255, 255, .92),
+    -12px 0 0 #141414 !important;
+  image-rendering: pixelated;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-main::before {
+  display: none;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-sidebar {
+  border: 4px solid #141414 !important;
+  border-left: 0 !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(90deg, #e86f25 0 8px, transparent 8px),
+    repeating-linear-gradient(0deg, transparent 0 30px, rgba(232, 111, 37, .16) 30px 32px),
+    rgba(255, 248, 219, .96) !important;
+  box-shadow: 8px 0 0 rgba(20, 20, 20, .28) !important;
+  backdrop-filter: none !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-sidebar button,
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-sidebar [role="button"],
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-sidebar .task-list-row {
+  border-radius: 0 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-sidebar button:hover,
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-sidebar [role="button"]:hover,
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-sidebar .task-list-row:hover {
+  border-color: #141414 !important;
+  background: #ffd080 !important;
+  box-shadow: 3px 3px 0 #141414 !important;
+  transform: translate(-1px, -1px);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-home [class*="traeWorkTitle-"] {
+  color: #141414 !important;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, monospace !important;
+  font-weight: 900 !important;
+  letter-spacing: .02em;
+  text-shadow:
+    3px 0 #fff8db,
+    -3px 0 #fff8db,
+    0 3px #fff8db,
+    0 -3px #fff8db,
+    4px 4px 0 rgba(20, 20, 20, .28) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-home [class*="traeWorkTitle-"]::before {
+  color: white;
+  font-family: inherit;
+  letter-spacing: .10em;
+  -webkit-text-stroke: 0;
+  text-shadow: 3px 3px 0 #141414;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-home [class*="traeWorkTitle-"]::after {
+  color: #141414;
+  font-family: inherit;
+  font-weight: 800;
+  text-shadow: 2px 2px 0 #fff8db;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .messageInputContainer.tds-composer,
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .messageInputContainer:has(.tds-composer) {
+  border: 4px solid #141414 !important;
+  border-radius: 0 !important;
+  background: rgba(255, 248, 219, .96) !important;
+  box-shadow:
+    8px 8px 0 rgba(20, 20, 20, .72),
+    inset 0 -6px #ffd080 !important;
+  backdrop-filter: none !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .messageInputContainer::before {
+  left: 14px;
+  top: -9px;
+  width: 52px;
+  height: 10px;
+  border: 3px solid #141414;
+  border-radius: 0;
+  background: repeating-linear-gradient(90deg, #e86f25 0 12px, #ff9847 12px 24px);
+  box-shadow: none;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .chat-input-v2-send-button,
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .showcase-content-wrapper button,
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .showcase-content-wrapper [role="button"],
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-home [class^="chip-"] {
+  border: 3px solid #141414 !important;
+  border-radius: 0 !important;
+  background: #ffd080 !important;
+  color: #141414 !important;
+  box-shadow: 4px 4px 0 #141414 !important;
+  backdrop-filter: none !important;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, monospace !important;
+  font-weight: 800 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .chat-input-v2-send-button {
+  background: #2fba16 !important;
+  color: white !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .chat-input-v2-send-button:hover,
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .showcase-content-wrapper button:hover,
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .showcase-content-wrapper [role="button"]:hover,
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-home [class^="chip-"]:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #141414 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .inputBarContainer-CLmEv6 {
+  border-top: 3px solid #141414 !important;
+  background: #ffd080 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="pixel-8bit"] .tds-main:not(.tds-home-shell) .panel-content {
+  background: rgba(255, 248, 219, .90) !important;
+  backdrop-filter: blur(6px) saturate(90%);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="pixel-8bit"] {
+  border-radius: 0;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="pixel-8bit"] .tds-brand,
+#trae-dream-skin-chrome[data-trae-dream-theme="pixel-8bit"] .tds-status {
+  color: white;
+  padding: 6px 9px;
+  border: 3px solid white;
+  border-radius: 0;
+  background: rgba(117, 141, 241, .88);
+  box-shadow: 4px 4px 0 #141414;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, monospace;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="pixel-8bit"] .tds-brand-mark {
+  width: 34px;
+  height: 34px;
+  border: 3px solid #141414;
+  border-radius: 0;
+  background: #ff9847;
+  box-shadow: inset 0 -5px #e86f25;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="pixel-8bit"] .tds-brand-mark::before {
+  content: "25";
+  color: #141414;
+  font: 900 15px/1 ui-monospace, "SFMono-Regular", Menlo, Monaco, monospace;
+  text-shadow: 1px 1px 0 #ffd080;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="pixel-8bit"] .tds-brand b,
+#trae-dream-skin-chrome[data-trae-dream-theme="pixel-8bit"] .tds-brand small {
+  color: white;
+  font-family: inherit;
+  text-shadow: 2px 2px 0 #141414;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="pixel-8bit"] .tds-status i {
+  width: 9px;
+  height: 13px;
+  border: 2px solid #141414;
+  border-radius: 0;
+  background: #ffb34d;
+  box-shadow: none;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="pixel-8bit"] .tds-quote {
+  padding: 6px 9px;
+  border: 3px solid white;
+  color: white;
+  background: rgba(117, 141, 241, .88);
+  font: 900 13px/1 ui-monospace, "SFMono-Regular", Menlo, Monaco, monospace;
+  letter-spacing: .10em;
+  -webkit-text-stroke: 0;
+  text-shadow: 2px 2px 0 #141414;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="pixel-8bit"] .tds-orbit,
+#trae-dream-skin-chrome[data-trae-dream-theme="pixel-8bit"] .tds-particles,
+#trae-dream-skin-chrome[data-trae-dream-theme="pixel-8bit"] .tds-scanline {
+  display: none;
+}
+
+/* Electric Forest: keep the artwork on the right and reserve the left/center
+   reading lane for TRAE Work's native title and composer. */
+:root.trae-dream-skin[data-trae-dream-theme="electric-forest"] {
+  color-scheme: light;
+  --tds-bg: #f5df48;
+  --tds-panel: #fff9db;
+  --tds-panel-2: #f7d64a;
+  --tds-accent: #e4472d;
+  --tds-accent-2: #f06443;
+  --tds-secondary: #6d8d2b;
+  --tds-highlight: #ffcb20;
+  --tds-coin: #ffcb20;
+  --tds-grass: #6d8d2b;
+  --tds-brick: #b78323;
+  --tds-text: #2d2a17;
+  --tds-muted: #6a6538;
+  --tds-line: rgba(80, 67, 16, .34);
+  --tds-glass: rgba(255, 249, 219, .88);
+  --tds-glass-strong: rgba(255, 253, 236, .97);
+  --tds-shadow: rgba(70, 57, 14, .24);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"],
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] body {
+  background: #d7bd3d !important;
+  color: var(--tds-text) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] body::before {
+  display: block;
+  opacity: .34;
+  background:
+    radial-gradient(circle, rgba(255, 255, 218, .88) 0 3px, transparent 4px) 82% 15% / 96px 112px,
+    radial-gradient(circle, rgba(255, 203, 32, .70) 0 2px, transparent 3px) 91% 31% / 131px 149px;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .tds-main {
+  border: 1px solid rgba(82, 71, 20, .30) !important;
+  border-right: 0 !important;
+  border-radius: 26px 0 0 26px !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 253, 236, .99) 0%,
+      rgba(255, 250, 219, .97) 25%,
+      rgba(255, 247, 205, .86) 42%,
+      rgba(255, 244, 190, .52) 55%,
+      rgba(255, 239, 151, .14) 70%,
+      transparent 82%
+    ),
+    var(--trae-dream-art) clamp(260px, 18vw, 460px) center / auto 100% no-repeat,
+    linear-gradient(135deg, #f6e86f, #8fae43) !important;
+  box-shadow:
+    -16px 0 46px rgba(70, 57, 14, .22),
+    inset 0 1px rgba(255, 255, 255, .58) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .tds-main::before {
+  display: none;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .tds-sidebar {
+  border: 1px solid rgba(82, 71, 20, .24) !important;
+  border-left: 0 !important;
+  border-radius: 0 24px 24px 0 !important;
+  background:
+    linear-gradient(90deg, #ffcb20 0 6px, transparent 6px),
+    radial-gradient(circle at 10% 4%, rgba(255, 203, 32, .22), transparent 26%),
+    repeating-linear-gradient(0deg, transparent 0 34px, rgba(109, 141, 43, .07) 34px 35px),
+    rgba(255, 253, 236, .97) !important;
+  box-shadow: 13px 0 36px rgba(70, 57, 14, .16) !important;
+  backdrop-filter: blur(18px) saturate(110%) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .tds-sidebar button:hover,
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .tds-sidebar [role="button"]:hover,
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .tds-sidebar .task-list-row:hover {
+  border-color: rgba(109, 141, 43, .42) !important;
+  background: rgba(255, 203, 32, .18) !important;
+  box-shadow: inset 4px 0 #e4472d !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .tds-home [class*="traeWorkTitle-"] {
+  color: #2d2a17 !important;
+  text-shadow:
+    0 2px rgba(255, 255, 255, .92),
+    0 16px 38px rgba(70, 57, 14, .20) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .tds-home [class*="traeWorkTitle-"]::before {
+  color: #e4472d;
+  -webkit-text-stroke: 0;
+  text-shadow: 0 1px rgba(255, 255, 255, .82);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .tds-home [class*="traeWorkTitle-"]::after {
+  color: #6a6538;
+  font-weight: 650;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .messageInputContainer.tds-composer,
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .messageInputContainer:has(.tds-composer) {
+  border: 2px solid rgba(183, 131, 35, .72) !important;
+  border-radius: 20px !important;
+  background:
+    radial-gradient(circle at 94% 12%, rgba(255, 203, 32, .17), transparent 27%),
+    rgba(255, 253, 236, .97) !important;
+  box-shadow:
+    0 20px 48px rgba(70, 57, 14, .24),
+    0 0 0 5px rgba(255, 203, 32, .10),
+    inset 0 1px rgba(255, 255, 255, .86) !important;
+  backdrop-filter: blur(20px) saturate(112%) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .messageInputContainer::before {
+  left: 20px;
+  top: -6px;
+  width: 48px;
+  height: 10px;
+  border-radius: 5px 5px 1px 1px;
+  background: linear-gradient(90deg, #2d2a17 0 14%, #ffcb20 14% 82%, #e4472d 82%);
+  box-shadow: 0 2px rgba(80, 67, 16, .24);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .chat-input-v2-send-button {
+  border: 1px solid #527220 !important;
+  background: linear-gradient(145deg, #86a83a, #5f8127) !important;
+  color: white !important;
+  box-shadow:
+    0 8px 20px rgba(75, 101, 31, .32),
+    inset 0 1px rgba(255, 255, 255, .38) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .showcase-content-wrapper button,
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .showcase-content-wrapper [role="button"],
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .tds-home [class^="chip-"] {
+  border: 1px solid rgba(183, 131, 35, .52) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 253, 236, .94) !important;
+  color: #2d2a17 !important;
+  box-shadow:
+    0 8px 20px rgba(70, 57, 14, .15),
+    inset 0 1px rgba(255, 255, 255, .86) !important;
+  backdrop-filter: blur(10px) saturate(110%) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .showcase-content-wrapper button:hover,
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .showcase-content-wrapper [role="button"]:hover,
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .tds-home [class^="chip-"]:hover {
+  border-color: #e4472d !important;
+  background: #fff3a8 !important;
+  transform: translateY(-2px);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .inputBarContainer-CLmEv6 {
+  border-top: 1px solid rgba(109, 141, 43, .24) !important;
+  background: rgba(247, 214, 74, .28) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .tds-main:not(.tds-home-shell) .panel-content {
+  background: rgba(255, 253, 236, .91) !important;
+  backdrop-filter: blur(10px) saturate(104%);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="electric-forest"] .tds-brand-mark {
+  border: 2px solid #5f551c;
+  border-radius: 11px;
+  background: linear-gradient(145deg, #fff15c, #ffcb20);
+  box-shadow:
+    0 7px 18px rgba(70, 57, 14, .20),
+    inset 0 2px rgba(255, 255, 255, .72);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="electric-forest"] .tds-brand-mark::before {
+  content: "⚡";
+  color: #2d2a17;
+  font: 800 20px/1 system-ui, sans-serif;
+  text-shadow: none;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="electric-forest"] .tds-brand b {
+  color: #e4472d;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="electric-forest"] .tds-brand small,
+#trae-dream-skin-chrome[data-trae-dream-theme="electric-forest"] .tds-status {
+  color: #6a6538;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="electric-forest"] .tds-status i {
+  border: 2px solid #6f5d12;
+  background: #ffcb20;
+  box-shadow: 0 0 14px rgba(255, 203, 32, .72);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="electric-forest"] .tds-quote {
+  color: #ffcb20;
+  -webkit-text-stroke: .6px #5f551c;
+  text-shadow:
+    0 2px #5f551c,
+    0 0 18px rgba(255, 255, 255, .72);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="electric-forest"] .tds-orbit,
+#trae-dream-skin-chrome[data-trae-dream-theme="electric-forest"] .tds-particles,
+#trae-dream-skin-chrome[data-trae-dream-theme="electric-forest"] .tds-scanline {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  html.trae-dream-skin[data-trae-dream-theme="electric-forest"] .tds-main {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255, 253, 236, .99) 0%,
+        rgba(255, 250, 219, .94) 38%,
+        rgba(255, 244, 190, .42) 64%,
+        transparent 84%
+      ),
+      var(--trae-dream-art) clamp(180px, 16vw, 300px) center / auto 100% no-repeat,
+      linear-gradient(135deg, #f6e86f, #8fae43) !important;
+  }
+}
+
+/* Sky Friends: move centered artwork to the right, leaving a calm blue reading
+   lane for TRAE Work's native UI. */
+:root.trae-dream-skin[data-trae-dream-theme="sky-friends"] {
+  color-scheme: light;
+  --tds-bg: #b7e4fa;
+  --tds-panel: #fffef6;
+  --tds-panel-2: #f9e8a4;
+  --tds-accent: #ee9fb8;
+  --tds-accent-2: #f6b8ca;
+  --tds-secondary: #77a9c7;
+  --tds-highlight: #ffd3df;
+  --tds-coin: #f9e8a4;
+  --tds-grass: #77a9c7;
+  --tds-brick: #ee9fb8;
+  --tds-text: #263744;
+  --tds-muted: #637887;
+  --tds-line: rgba(70, 119, 148, .28);
+  --tds-glass: rgba(255, 254, 246, .86);
+  --tds-glass-strong: rgba(255, 255, 251, .97);
+  --tds-shadow: rgba(53, 95, 120, .20);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"],
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] body {
+  background: #b7e4fa !important;
+  color: var(--tds-text) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] body::before {
+  display: block;
+  opacity: .38;
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, .92) 0 4px, transparent 5px) 78% 18% / 132px 146px,
+    radial-gradient(circle, rgba(255, 211, 223, .82) 0 3px, transparent 4px) 91% 31% / 168px 181px;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .tds-main {
+  border: 1px solid rgba(70, 119, 148, .26) !important;
+  border-right: 0 !important;
+  border-radius: 28px 0 0 28px !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(183, 228, 250, .99) 0%,
+      rgba(183, 228, 250, .98) 34%,
+      rgba(190, 231, 250, .91) 49%,
+      rgba(201, 236, 252, .48) 63%,
+      rgba(210, 240, 253, .10) 76%,
+      transparent 86%
+    ),
+    var(--trae-dream-art) clamp(800px, 37vw, 960px) center / auto 72% no-repeat,
+    #b7e4fa !important;
+  box-shadow:
+    -15px 0 42px rgba(53, 95, 120, .18),
+    inset 0 1px rgba(255, 255, 255, .60) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .tds-main::before {
+  display: none;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .tds-sidebar {
+  border: 1px solid rgba(70, 119, 148, .24) !important;
+  border-left: 0 !important;
+  border-radius: 0 24px 24px 0 !important;
+  background:
+    linear-gradient(90deg, #ee9fb8 0 6px, transparent 6px),
+    radial-gradient(circle at 10% 4%, rgba(255, 211, 223, .36), transparent 26%),
+    repeating-linear-gradient(0deg, transparent 0 34px, rgba(119, 169, 199, .08) 34px 35px),
+    rgba(255, 255, 251, .97) !important;
+  box-shadow: 13px 0 36px rgba(53, 95, 120, .14) !important;
+  backdrop-filter: blur(18px) saturate(108%) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .tds-sidebar button:hover,
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .tds-sidebar [role="button"]:hover,
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .tds-sidebar .task-list-row:hover {
+  border-color: rgba(238, 159, 184, .62) !important;
+  background: rgba(255, 211, 223, .22) !important;
+  box-shadow: inset 4px 0 #77a9c7 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .tds-home [class*="traeWorkTitle-"] {
+  color: #263744 !important;
+  text-shadow:
+    0 2px rgba(255, 255, 255, .92),
+    0 15px 36px rgba(53, 95, 120, .18) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .tds-home [class*="traeWorkTitle-"]::before {
+  color: #d9819d;
+  -webkit-text-stroke: 0;
+  text-shadow: 0 1px white;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .tds-home [class*="traeWorkTitle-"]::after {
+  color: #637887;
+  font-weight: 620;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .messageInputContainer.tds-composer,
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .messageInputContainer:has(.tds-composer) {
+  border: 2px solid rgba(119, 169, 199, .62) !important;
+  border-radius: 22px !important;
+  background:
+    radial-gradient(circle at 94% 12%, rgba(255, 211, 223, .19), transparent 28%),
+    rgba(255, 255, 251, .97) !important;
+  box-shadow:
+    0 19px 46px rgba(53, 95, 120, .20),
+    0 0 0 5px rgba(183, 228, 250, .24),
+    inset 0 1px rgba(255, 255, 255, .88) !important;
+  backdrop-filter: blur(18px) saturate(108%) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .messageInputContainer::before {
+  left: 20px;
+  top: -6px;
+  width: 48px;
+  height: 10px;
+  border-radius: 6px 6px 2px 2px;
+  background: linear-gradient(90deg, #77a9c7 0 30%, #fffef6 30% 67%, #ee9fb8 67%);
+  box-shadow: 0 2px rgba(70, 119, 148, .22);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .chat-input-v2-send-button {
+  border: 1px solid #5c91af !important;
+  background: linear-gradient(145deg, #8abbd6, #669dbb) !important;
+  color: white !important;
+  box-shadow:
+    0 8px 20px rgba(53, 95, 120, .26),
+    inset 0 1px rgba(255, 255, 255, .40) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .showcase-content-wrapper button,
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .showcase-content-wrapper [role="button"],
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .tds-home [class^="chip-"] {
+  border: 1px solid rgba(119, 169, 199, .46) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 251, .94) !important;
+  color: #263744 !important;
+  box-shadow:
+    0 8px 20px rgba(53, 95, 120, .13),
+    inset 0 1px rgba(255, 255, 255, .88) !important;
+  backdrop-filter: blur(10px) saturate(108%) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .showcase-content-wrapper button:hover,
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .showcase-content-wrapper [role="button"]:hover,
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .tds-home [class^="chip-"]:hover {
+  border-color: #ee9fb8 !important;
+  background: #fff1f5 !important;
+  transform: translateY(-2px);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .inputBarContainer-CLmEv6 {
+  border-top: 1px solid rgba(119, 169, 199, .24) !important;
+  background: rgba(183, 228, 250, .22) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .tds-main:not(.tds-home-shell) .panel-content {
+  background: rgba(255, 255, 251, .91) !important;
+  backdrop-filter: blur(10px) saturate(102%);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="sky-friends"] .tds-brand-mark {
+  border: 2px solid #6f9fb9;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #fffef6, #ffd3df);
+  box-shadow:
+    0 7px 18px rgba(53, 95, 120, .18),
+    inset 0 2px rgba(255, 255, 255, .78);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="sky-friends"] .tds-brand-mark::before {
+  content: "♡";
+  color: #d9819d;
+  font: 900 24px/1 ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif;
+  text-shadow: none;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="sky-friends"] .tds-brand b {
+  color: #d9819d;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="sky-friends"] .tds-brand small,
+#trae-dream-skin-chrome[data-trae-dream-theme="sky-friends"] .tds-status {
+  color: #637887;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="sky-friends"] .tds-status i {
+  border: 2px solid #6f9fb9;
+  background: #ffd3df;
+  box-shadow: 0 0 14px rgba(238, 159, 184, .52);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="sky-friends"] .tds-quote {
+  color: #ee9fb8;
+  -webkit-text-stroke: .4px #6f9fb9;
+  text-shadow:
+    0 2px white,
+    0 0 18px rgba(255, 255, 255, .72);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="sky-friends"] .tds-orbit,
+#trae-dream-skin-chrome[data-trae-dream-theme="sky-friends"] .tds-particles,
+#trae-dream-skin-chrome[data-trae-dream-theme="sky-friends"] .tds-scanline {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  html.trae-dream-skin[data-trae-dream-theme="sky-friends"] .tds-main {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(183, 228, 250, .99) 0%,
+        rgba(190, 231, 250, .94) 44%,
+        rgba(201, 236, 252, .42) 67%,
+        transparent 86%
+      ),
+      var(--trae-dream-art) clamp(560px, 34vw, 720px) center / auto 68% no-repeat,
+      #b7e4fa !important;
+  }
+}
+
+/* Retro 2007: recreate a compact blue-and-silver desktop client while keeping
+   every TRAE Work control native. */
+:root.trae-dream-skin[data-trae-dream-theme="retro-2007"] {
+  color-scheme: light;
+  --tds-bg: #2b78d4;
+  --tds-panel: #f7fbff;
+  --tds-panel-2: #e6f1fc;
+  --tds-accent: #2f75bd;
+  --tds-accent-2: #78a9e5;
+  --tds-secondary: #5fa9ea;
+  --tds-highlight: #f4cb49;
+  --tds-coin: #f4cb49;
+  --tds-grass: #74b746;
+  --tds-brick: #6d91b8;
+  --tds-text: #24394f;
+  --tds-muted: #647f9b;
+  --tds-line: rgba(87, 130, 176, .72);
+  --tds-glass: rgba(239, 247, 255, .96);
+  --tds-glass-strong: rgba(252, 254, 255, .99);
+  --tds-shadow: rgba(19, 68, 121, .28);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"],
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] body {
+  background: linear-gradient(180deg, #4b9af0 0, #2676d4 44%, #155cac 100%) !important;
+  color: #24394f !important;
+  font-family: Tahoma, "Microsoft YaHei UI", "PingFang SC", Arial, sans-serif !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] body::before {
+  display: none;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-sidebar {
+  position: relative !important;
+  border: 1px solid #6e91b8 !important;
+  border-left: 0 !important;
+  border-radius: 0 7px 7px 0 !important;
+  background:
+    linear-gradient(180deg, #5ba4f2 0, #1d70cf 28px, transparent 28px),
+    linear-gradient(180deg, transparent 0 28px, #f9fbfe 28px 66px, #dbeafb 66px 67px, #f4f9ff 67px 100%) !important;
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, .72),
+    inset -1px 0 rgba(255, 255, 255, .72),
+    2px 0 7px rgba(31, 78, 128, .24) !important;
+  backdrop-filter: none !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-sidebar .task-list-base-header {
+  border-top: 1px solid #b7cde4 !important;
+  border-bottom: 1px solid #85a7ca !important;
+  background: linear-gradient(180deg, #f8fbff, #d9e9f9) !important;
+  box-shadow: inset 0 1px white !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-sidebar button,
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-sidebar [role="button"],
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-sidebar .task-list-new-task-item,
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-sidebar .task-list-row {
+  border-radius: 3px !important;
+  color: #25384c !important;
+  font-size: 12px !important;
+  text-shadow: 0 1px white;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-sidebar button:hover,
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-sidebar [role="button"]:hover,
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-sidebar .task-list-row:hover {
+  border-color: #83a9ce !important;
+  background: linear-gradient(180deg, #fffef2, #dcecff) !important;
+  box-shadow: inset 0 0 0 1px white !important;
+  transform: none !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-sidebar .task-list-group-name,
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-sidebar .task-list-heading-text {
+  color: #3d658f !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-sidebar .solo-common-button[class*="primary"],
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-sidebar button[aria-pressed="true"] {
+  border: 1px solid #6b95c0 !important;
+  background: linear-gradient(180deg, #ffffff, #d9e9f8) !important;
+  color: #24394f !important;
+  box-shadow:
+    inset 0 1px white,
+    inset 0 -1px #b1c9e2 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-main {
+  border: 1px solid #5d83ad !important;
+  border-right: 0 !important;
+  border-radius: 7px 0 0 7px !important;
+  background:
+    linear-gradient(
+      180deg,
+      #58a2ef 0,
+      #1c6dca 28px,
+      #edf5fd 28px,
+      #fbfdff 73px,
+      #f5faff 73px,
+      #edf6ff calc(100% - 24px),
+      #d6e8fa calc(100% - 24px),
+      #b5d4f2 100%
+    ) !important;
+  box-shadow:
+    -3px 0 8px rgba(25, 73, 123, .24),
+    inset 0 1px rgba(255, 255, 255, .78) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-main::before {
+  display: block;
+  inset: 28px 0 auto 0;
+  height: 45px;
+  border-top: 1px solid rgba(255, 255, 255, .88);
+  border-bottom: 1px solid #8caccc;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .88), rgba(219, 234, 249, .94) 48%, rgba(192, 216, 240, .96)) !important;
+  box-shadow: 0 1px white;
+  opacity: 1;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-main > .panel-content,
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-main .initial-chat-panel {
+  background: transparent !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-home [class*="traeWorkTitle-"] {
+  color: #20364e !important;
+  font-family: Tahoma, "Microsoft YaHei UI", "PingFang SC", Arial, sans-serif !important;
+  font-size: clamp(25px, 2vw, 34px) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  text-shadow: 0 1px white !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-home [class*="traeWorkTitle-"]::before {
+  content: "●  " var(--tds-name, "RETRO WORK 2007");
+  color: #2d6fac;
+  font: 700 12px/1.3 Tahoma, "Microsoft YaHei UI", sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  -webkit-text-stroke: 0;
+  text-shadow: 0 1px white;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-home [class*="traeWorkTitle-"]::after {
+  color: #526d88;
+  font: 400 13px/1.5 Tahoma, "Microsoft YaHei UI", sans-serif;
+  letter-spacing: 0;
+  text-shadow: 0 1px white;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .messageInputContainer.tds-composer,
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .messageInputContainer:has(.tds-composer) {
+  border: 1px solid #789bc0 !important;
+  border-radius: 5px !important;
+  background: #fff !important;
+  box-shadow:
+    0 0 0 4px #d4e7f8,
+    0 0 0 5px #7da1c5,
+    inset 0 1px 2px rgba(68, 104, 142, .18) !important;
+  backdrop-filter: none !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .messageInputContainer::before {
+  content: "☺ 表情     ▣ 图片     🔗 附加";
+  box-sizing: border-box;
+  left: -1px;
+  top: -31px;
+  width: calc(100% + 2px);
+  height: 27px;
+  padding: 6px 11px;
+  border: 1px solid #82a5c8;
+  border-radius: 5px 5px 0 0;
+  background: linear-gradient(180deg, #fafdff, #dcebf9);
+  color: #365b80;
+  font: 12px/1.1 Tahoma, "Microsoft YaHei UI", sans-serif;
+  white-space: nowrap;
+  box-shadow: inset 0 1px white;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .chat-input-v2-input-box-editable,
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .chat-input-v2-placeholder {
+  color: #24394f !important;
+  caret-color: #226fbe !important;
+  font-family: Tahoma, "Microsoft YaHei UI", "PingFang SC", sans-serif !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .chat-input-v2-placeholder {
+  color: #8295aa !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .chat-input-v2-send-button {
+  border: 1px solid #3a74ad !important;
+  border-radius: 3px !important;
+  background: linear-gradient(180deg, #8fc8fb 0, #4c96dc 48%, #2f76bd 100%) !important;
+  color: white !important;
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, .84),
+    inset 0 -1px rgba(24, 80, 136, .58) !important;
+  text-shadow: 0 1px #265d94;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .chat-input-v2-send-button:hover {
+  border-color: #1f5f9f !important;
+  background: linear-gradient(180deg, #a7d6ff, #3e8bd2) !important;
+  transform: none;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .showcase-content-wrapper button,
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .showcase-content-wrapper [role="button"],
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-home [class^="chip-"] {
+  border: 1px solid #7c9fc2 !important;
+  border-radius: 3px !important;
+  background: linear-gradient(180deg, #ffffff, #dcebf9) !important;
+  color: #294866 !important;
+  box-shadow:
+    inset 0 1px white,
+    inset 0 -1px #bdd2e7 !important;
+  backdrop-filter: none !important;
+  font-family: Tahoma, "Microsoft YaHei UI", sans-serif !important;
+  font-size: 12px !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .showcase-content-wrapper button:hover,
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .showcase-content-wrapper [role="button"]:hover,
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-home [class^="chip-"]:hover {
+  border-color: #4f80b2 !important;
+  background: linear-gradient(180deg, #fffef0, #cee5fa) !important;
+  transform: none;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .inputBarContainer-CLmEv6 {
+  border-top: 1px solid #aec7df !important;
+  background: linear-gradient(180deg, #f8fbff, #dcebf8) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] .tds-main:not(.tds-home-shell) .panel-content {
+  background: rgba(247, 251, 255, .98) !important;
+  backdrop-filter: none !important;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] {
+  border-radius: 7px 0 0 7px;
+  font-family: Tahoma, "Microsoft YaHei UI", "PingFang SC", Arial, sans-serif;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-brand {
+  left: 9px;
+  top: 5px;
+  gap: 6px;
+  color: white;
+  opacity: 1;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-brand > span:last-child {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-brand-mark {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #154f91;
+  border-radius: 3px;
+  background: linear-gradient(145deg, #ecf7ff, #7fb8ee 48%, #1e62b3 50%, #123e82);
+  box-shadow: inset 0 1px white;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-brand-mark::before {
+  content: "C";
+  color: white;
+  font: 700 10px/1 Tahoma, Arial, sans-serif;
+  text-shadow: 0 1px #164d85;
+  transform: translate(-50%, -50%);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-brand b {
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-shadow: 0 1px #164e8c;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-brand small {
+  margin: 0;
+  color: #eaf5ff;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-shadow: 0 1px #164e8c;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-status {
+  right: 10px;
+  top: 8px;
+  gap: 6px;
+  color: white;
+  font: 700 10px/1 Tahoma, "Microsoft YaHei UI", sans-serif;
+  letter-spacing: 0;
+  text-shadow: 0 1px #154f91;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-status i {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #528423;
+  border-radius: 50%;
+  background: #8ed13f;
+  box-shadow: inset 0 1px white;
+  animation: none;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles {
+  display: flex;
+  inset: 29px 270px auto 0;
+  height: 43px;
+  padding: 0 12px;
+  align-items: center;
+  gap: clamp(8px, 1.4vw, 24px);
+  opacity: 1;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i {
+  position: relative;
+  left: auto;
+  top: auto;
+  display: grid;
+  width: auto;
+  min-width: 55px;
+  height: 34px;
+  padding-left: 25px;
+  place-items: center start;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: #294866;
+  font: normal 11px/1 Tahoma, "Microsoft YaHei UI", sans-serif;
+  animation: none;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i::before {
+  position: absolute;
+  left: 1px;
+  top: 7px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #7a9ec2;
+  border-radius: 3px;
+  background: linear-gradient(145deg, #ffffff, #bad7f2);
+  color: #3176b9;
+  font: 700 13px/17px Tahoma, Arial, sans-serif;
+  text-align: center;
+  box-shadow: inset 0 1px white;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(1)::before { content: "+"; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(1)::after { content: "新建任务"; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(2)::before { content: "✓"; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(2)::after { content: "已安排"; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(3)::before { content: "⚙"; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(3)::after { content: "插件"; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(4)::before { content: "★"; color: #d89b09; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(4)::after { content: "热点"; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(5)::before { content: "↙"; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(5)::after { content: "拉取请求"; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(6)::before { content: "●"; color: #79b739; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(6)::after { content: "聊天"; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(7)::before { content: "✎"; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(7)::after { content: "记录"; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(8)::before { content: "?"; }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(8)::after { content: "帮助"; }
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-orbit {
+  display: none;
+  right: 11px;
+  top: 82px;
+  width: 226px;
+  height: 438px;
+  aspect-ratio: auto;
+  border: 1px solid #7699bd;
+  border-radius: 5px;
+  opacity: 1;
+  background:
+    linear-gradient(180deg, #dceeff 0 26px, transparent 26px),
+    radial-gradient(circle at 23px 54px, rgba(255,255,255,.95) 0 2px, transparent 3px),
+    radial-gradient(circle at 193px 91px, rgba(255,255,255,.92) 0 3px, transparent 4px),
+    linear-gradient(180deg, #f9fcff 0 54%, #eaf3ff 54% 56%, #f4efff 56% 100%);
+  box-shadow:
+    inset 0 1px white,
+    0 2px 5px rgba(44, 83, 123, .23);
+  transform: none;
+  animation: none;
+}
+
+#trae-dream-skin-chrome.tds-home-shell[data-trae-dream-theme="retro-2007"] .tds-orbit {
+  display: block;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-orbit::before {
+  content: "⊗  Codex 好友";
+  position: absolute;
+  inset: 0 0 auto 0;
+  box-sizing: border-box;
+  height: 27px;
+  padding: 6px 8px;
+  border-bottom: 1px solid #83a5c8;
+  color: #34597e;
+  font: 700 11px/1.2 Tahoma, "Microsoft YaHei UI", sans-serif;
+  text-shadow: 0 1px white;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-orbit::after {
+  content: "●  Codex 小蓝     LV07\A代码有问题？找我！\A我是你的智能伙伴，随时在线。";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 203px;
+  box-sizing: border-box;
+  min-height: 76px;
+  padding: 8px 10px;
+  border: 1px solid #91acc8;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, .88);
+  color: #35516f;
+  font: 11px/1.55 Tahoma, "Microsoft YaHei UI", sans-serif;
+  white-space: pre-line;
+  box-shadow: inset 0 1px white;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-orbit i {
+  position: absolute;
+  border: 1px solid #173f84;
+  background: linear-gradient(145deg, #78b3ff, #3d68d0 52%, #273b94);
+  box-shadow:
+    inset 0 2px rgba(255, 255, 255, .58),
+    0 2px 4px rgba(30, 56, 106, .36);
+  animation: none;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-orbit i:nth-child(1) {
+  left: 73px;
+  top: 53px;
+  width: 78px;
+  height: 68px;
+  border-radius: 35px 35px 24px 24px;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-orbit i:nth-child(1)::before {
+  content: ">_";
+  position: absolute;
+  left: 11px;
+  top: 17px;
+  width: 56px;
+  height: 31px;
+  border: 1px solid #0d2867;
+  border-radius: 13px;
+  background: linear-gradient(180deg, #173c87, #111d5d);
+  color: #95efff;
+  font: 700 15px/30px ui-monospace, Menlo, monospace;
+  text-align: center;
+  text-shadow: 0 0 5px #66dfff;
+  box-shadow: inset 0 1px rgba(255, 255, 255, .28);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-orbit i:nth-child(2) {
+  left: 83px;
+  top: 118px;
+  width: 58px;
+  height: 61px;
+  border-radius: 18px 18px 25px 25px;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-orbit i:nth-child(2)::before,
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-orbit i:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 34px;
+  width: 20px;
+  height: 30px;
+  border: 1px solid #173f84;
+  border-radius: 8px 8px 13px 13px;
+  background: linear-gradient(180deg, #557ee0, #293d9a);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-orbit i:nth-child(2)::before { left: -12px; transform: rotate(15deg); }
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-orbit i:nth-child(2)::after { right: -12px; transform: rotate(-15deg); }
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-orbit i:nth-child(3) {
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  width: auto;
+  height: 129px;
+  border-color: #9b9fc9;
+  border-radius: 3px;
+  background:
+    linear-gradient(180deg, #e6e9ff 0 26px, transparent 26px),
+    radial-gradient(circle at 50% 70%, #ffe0c2 0 28px, transparent 29px),
+    radial-gradient(ellipse at 50% 97%, #9bb8e4 0 54px, transparent 55px),
+    radial-gradient(circle at 50% 71%, #a76535 0 38px, transparent 39px),
+    linear-gradient(135deg, #eef2ff, #d9d5ff);
+  box-shadow: inset 0 1px white;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-orbit i:nth-child(3)::before {
+  content: "⌄  我的好友 (2/48)";
+  position: absolute;
+  inset: 0 0 auto 0;
+  box-sizing: border-box;
+  height: 26px;
+  padding: 6px 7px;
+  border-bottom: 1px solid #aaaed4;
+  color: #4d5782;
+  font: 700 10px/1.2 Tahoma, "Microsoft YaHei UI", sans-serif;
+  text-shadow: 0 1px white;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-orbit i:nth-child(3)::after {
+  content: "好友在线";
+  position: absolute;
+  right: 8px;
+  bottom: 7px;
+  color: #5b6591;
+  font: 10px/1 Tahoma, "Microsoft YaHei UI", sans-serif;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-quote {
+  display: none !important;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-scanline {
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  height: 24px;
+  padding: 5px 10px;
+  border-top: 1px solid #7d9fc0;
+  background: linear-gradient(180deg, #eaf4fd, #bcd6ef);
+  color: #486987;
+  font: 10px/1.2 Tahoma, "Microsoft YaHei UI", sans-serif;
+  opacity: 1;
+  box-shadow: inset 0 1px white;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-scanline::before {
+  content: "就绪  |  安全连接  |  TRAE Work 2007";
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-scanline::after {
+  content: "☻ 在线";
+  position: absolute;
+  right: 10px;
+  color: #4f7e28;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="retro-2007"] * {
+  scrollbar-color: #91b2d2 #eaf3fb;
+}
+
+@media (max-width: 1180px) {
+  #trae-dream-skin-chrome.tds-home-shell[data-trae-dream-theme="retro-2007"] .tds-orbit {
+    display: none;
+  }
+
+  #trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles {
+    right: 0;
+  }
+
+  #trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(n+6) {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  #trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-brand small,
+  #trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-status span,
+  #trae-dream-skin-chrome[data-trae-dream-theme="retro-2007"] .tds-particles i:nth-child(n+4) {
+    display: none !important;
+  }
+}
+
+/* Xbox Series X|S Power Lab: a full dark hardware-gallery treatment with a
+   deliberately quiet reading lane on the left and product art on the right. */
+:root.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] {
+  color-scheme: dark;
+  --tds-bg: #050706;
+  --tds-panel: #101411;
+  --tds-panel-2: #182019;
+  --tds-accent: #9bf00b;
+  --tds-accent-2: #52b043;
+  --tds-secondary: #107c10;
+  --tds-highlight: #ffffff;
+  --tds-coin: #9bf00b;
+  --tds-grass: #52b043;
+  --tds-brick: #2b6f2b;
+  --tds-text: #f5f7f5;
+  --tds-muted: #a7b0a9;
+  --tds-line: rgba(155, 240, 11, .28);
+  --tds-glass: rgba(11, 15, 12, .83);
+  --tds-glass-strong: rgba(13, 18, 14, .95);
+  --tds-shadow: rgba(0, 0, 0, .52);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"],
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] body {
+  background: #050706 !important;
+  color: #f5f7f5 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] body::before {
+  opacity: .18;
+  background:
+    linear-gradient(rgba(155, 240, 11, .055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(155, 240, 11, .055) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(90deg, black, transparent 62%);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar {
+  border: 1px solid rgba(155, 240, 11, .22) !important;
+  border-left: 0 !important;
+  border-radius: 0 22px 22px 0 !important;
+  background:
+    linear-gradient(90deg, #9bf00b 0 4px, transparent 4px),
+    radial-gradient(circle at 3% 4%, rgba(155, 240, 11, .17), transparent 28%),
+    linear-gradient(180deg, rgba(10, 14, 11, .98), rgba(5, 8, 6, .96)) !important;
+  box-shadow: 16px 0 46px rgba(0, 0, 0, .46) !important;
+  backdrop-filter: blur(25px) saturate(118%) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar .task-list-base-header {
+  border-bottom-color: rgba(155, 240, 11, .15) !important;
+  background: linear-gradient(180deg, rgba(20, 28, 21, .92), transparent) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar * {
+  color: #d8dfda !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar svg {
+  color: #b6c0b8 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar [role="tab"] {
+  background: rgba(255, 255, 255, .045) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar [role="tab"][aria-selected="true"] {
+  background: linear-gradient(135deg, #9bf00b, #66c819) !important;
+  box-shadow: 0 6px 18px rgba(155, 240, 11, .20), inset 0 1px rgba(255, 255, 255, .48) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar [role="tab"][aria-selected="true"],
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar [role="tab"][aria-selected="true"] * {
+  color: #071006 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar .task-list-shadow-bottom {
+  background: linear-gradient(0deg, #080b09 0%, rgba(8, 11, 9, 0) 100%) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar button,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar [role="button"],
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar .task-list-row {
+  color: #f5f7f5 !important;
+  border-radius: 10px !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar button:hover,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar [role="button"]:hover,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar .task-list-row:hover {
+  border-color: rgba(155, 240, 11, .42) !important;
+  background: linear-gradient(90deg, rgba(155, 240, 11, .18), rgba(16, 124, 16, .09)) !important;
+  box-shadow: inset 3px 0 #9bf00b, 0 8px 22px rgba(0, 0, 0, .16) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar .task-list-group-name,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar .task-list-heading-text {
+  color: #9da7a0 !important;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar .solo-common-button[class*="primary"],
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-sidebar button[aria-pressed="true"] {
+  border: 1px solid rgba(155, 240, 11, .62) !important;
+  background: linear-gradient(135deg, #107c10, #0b5f0b) !important;
+  color: white !important;
+  box-shadow: 0 8px 24px rgba(16, 124, 16, .38), inset 0 1px rgba(255, 255, 255, .18) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-main {
+  border: 1px solid rgba(155, 240, 11, .24) !important;
+  border-right: 0 !important;
+  border-radius: 24px 0 0 24px !important;
+  background:
+    linear-gradient(90deg, rgba(4, 7, 5, .99) 0%, rgba(4, 7, 5, .96) 29%, rgba(4, 7, 5, .81) 43%, rgba(4, 7, 5, .32) 61%, rgba(4, 7, 5, .04) 78%),
+    var(--trae-dream-art) center center / cover no-repeat,
+    #050706 !important;
+  box-shadow: -18px 0 52px rgba(0, 0, 0, .52), inset 0 1px rgba(255, 255, 255, .08) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-main::before {
+  display: block;
+  background:
+    linear-gradient(90deg, rgba(155, 240, 11, .62), transparent 34%) left top / 46% 1px no-repeat,
+    linear-gradient(rgba(155, 240, 11, .48), transparent 38%) left top / 1px 44% no-repeat,
+    radial-gradient(circle at 48% 82%, rgba(155, 240, 11, .14), transparent 24%) !important;
+  opacity: 1;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-home [class*="traeWorkTitle-"] {
+  color: #ffffff !important;
+  font-family: Inter, "SF Pro Display", "PingFang SC", system-ui, sans-serif !important;
+  font-weight: 780 !important;
+  letter-spacing: -.035em;
+  text-shadow: 0 3px 24px rgba(0, 0, 0, .92) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-home [class*="titleText-"],
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-home [class*="titleText-"] *,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-home [class*="withTraeText-"],
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-home [class*="withTraeText-"] * {
+  color: #ffffff !important;
+  text-shadow: 0 3px 24px rgba(0, 0, 0, .94) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-home [class*="traeWorkTitle-"]::before {
+  content: "●  " var(--tds-name, "XBOX SERIES X|S · POWER LAB");
+  color: #9bf00b;
+  font-size: 11px;
+  letter-spacing: .16em;
+  -webkit-text-stroke: 0;
+  text-shadow: 0 0 18px rgba(155, 240, 11, .28);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-home [class*="traeWorkTitle-"]::after {
+  color: #c7cec9;
+  font-weight: 560;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, .9);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .messageInputContainer.tds-composer,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .messageInputContainer:has(.tds-composer) {
+  border: 1px solid rgba(155, 240, 11, .48) !important;
+  border-radius: 18px !important;
+  background:
+    radial-gradient(circle at 91% 12%, rgba(155, 240, 11, .08), transparent 25%),
+    linear-gradient(145deg, rgba(17, 23, 18, .96), rgba(7, 10, 8, .94)) !important;
+  box-shadow: 0 22px 56px rgba(0, 0, 0, .58), 0 0 0 4px rgba(155, 240, 11, .05), inset 0 1px rgba(255, 255, 255, .09) !important;
+  backdrop-filter: blur(26px) saturate(118%) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .messageInputContainer::before {
+  content: "QUICK RESUME";
+  box-sizing: border-box;
+  left: 20px;
+  top: -8px;
+  width: auto;
+  min-width: 108px;
+  height: 16px;
+  padding: 2px 10px;
+  border: 1px solid rgba(155, 240, 11, .55);
+  border-radius: 999px;
+  background: #101611;
+  color: #9bf00b;
+  font: 760 8px/10px ui-monospace, "SFMono-Regular", Menlo, monospace;
+  letter-spacing: .12em;
+  box-shadow: 0 0 16px rgba(155, 240, 11, .12);
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .chat-input-v2-input-box-editable,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .chat-input-v2-placeholder {
+  color: #f5f7f5 !important;
+  caret-color: #9bf00b !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .chat-input-v2-placeholder {
+  color: #879088 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .chat-input-v2-send-button {
+  border: 1px solid #b8ff42 !important;
+  background: linear-gradient(145deg, #9bf00b, #52b043) !important;
+  color: #071006 !important;
+  box-shadow: 0 8px 24px rgba(155, 240, 11, .27), inset 0 1px rgba(255, 255, 255, .46) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .showcase-content-wrapper button,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .showcase-content-wrapper [role="button"],
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-home [class^="chip-"] {
+  border: 1px solid rgba(155, 240, 11, .31) !important;
+  border-radius: 13px !important;
+  background: linear-gradient(145deg, rgba(24, 31, 25, .94), rgba(9, 13, 10, .94)) !important;
+  color: #f5f7f5 !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .35), inset 0 1px rgba(255, 255, 255, .08) !important;
+  backdrop-filter: blur(18px) saturate(115%) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .showcase-content-wrapper button:hover,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .showcase-content-wrapper [role="button"]:hover,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-home [class^="chip-"]:hover {
+  border-color: #9bf00b !important;
+  background: linear-gradient(145deg, rgba(29, 43, 30, .98), rgba(12, 21, 13, .98)) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, .44), 0 0 0 3px rgba(155, 240, 11, .07) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] [class*="sceneTab_"] {
+  border: 1px solid rgba(155, 240, 11, .26) !important;
+  background: rgba(9, 14, 10, .91) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .28) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] [class*="sceneTab_"] *,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] [class*="sceneTabText_"] {
+  color: #e9eeea !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] [class*="sceneTabActive_"] {
+  border-color: #9bf00b !important;
+  background: linear-gradient(135deg, #9bf00b, #55b72d) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] [class*="sceneTabActive_"] *,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] [class*="sceneTabActive_"] [class*="sceneTabText_"] {
+  color: #071006 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] [class*="casesPanel_"] {
+  border-color: rgba(155, 240, 11, .22) !important;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, .34) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .inputBarContainer-CLmEv6 {
+  border-top-color: rgba(155, 240, 11, .18) !important;
+  background: rgba(10, 15, 11, .88) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .inputBarContainer-CLmEv6,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .inputBarContainer-CLmEv6 * {
+  color: #cbd4cd !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .inputBarContainer-CLmEv6 svg {
+  color: #9bf00b !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] [class*="casesPanelTitle_"] {
+  color: #4d5750 !important;
+  font-weight: 650 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-main:not(.tds-home-shell) .panel-content {
+  background: linear-gradient(90deg, rgba(8, 12, 9, .96), rgba(10, 16, 11, .82)) !important;
+  color: #eef3ef !important;
+  backdrop-filter: blur(18px) saturate(108%);
+}
+
+/* Xbox conversation workspace. Native TRAE conversation surfaces are light
+   even when the surrounding shell is dark, so each semantic layer needs an
+   explicit treatment instead of inheriting the home page background. */
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .solo-lite-chat-panel-container {
+  border: 1px solid rgba(155, 240, 11, .24) !important;
+  border-radius: 18px !important;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(155, 240, 11, .08), transparent 27%),
+    linear-gradient(rgba(155, 240, 11, .025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(155, 240, 11, .025) 1px, transparent 1px),
+    linear-gradient(145deg, #101511, #070a08 74%) !important;
+  background-size: auto, 42px 42px, 42px 42px, auto !important;
+  box-shadow: 0 22px 54px rgba(0,0,0,.5), inset 0 1px rgba(255,255,255,.06) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] :is(
+  .solo-lite-chat-panel-main,
+  .solo-lite-chat-panel,
+  .solo-lite-chat-panel-content,
+  .solo-lite-chat-container,
+  .session-panel,
+  .session-panel-content,
+  .session-view,
+  .ai-chat,
+  .virtualized-message-list-view,
+  .virtualized-message-list-view__content,
+  .virtualized-message-list-view__scroller
+) {
+  background: transparent !important;
+  color: #edf3ef !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .solo-lite-chat-panel-main > :first-child {
+  border-bottom: 1px solid rgba(155, 240, 11, .15) !important;
+  background: linear-gradient(90deg, rgba(14,20,15,.94), rgba(8,11,9,.88)) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .session-panel-content {
+  margin: 0 !important;
+  border: 1px solid rgba(155, 240, 11, .12) !important;
+  border-radius: 16px !important;
+  background: linear-gradient(155deg, rgba(20,27,21,.72), rgba(7,10,8,.68)) !important;
+  box-shadow: inset 3px 0 rgba(155,240,11,.32), 0 12px 28px rgba(0,0,0,.23) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] :is(
+  .core-finish-card,
+  .core-finish-card__summary,
+  .agent-plan-item
+) {
+  color: #edf3ef !important;
+  background: transparent !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .markdown-renderer,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .markdown-renderer :is(p, li, h1, h2, h3, h4, h5, h6, strong, em, blockquote, span) {
+  color: #e8eee9 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .markdown-renderer :is(a, button) {
+  color: #b8ff42 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .markdown-renderer :is(pre, code) {
+  color: #dfffc2 !important;
+  border-color: rgba(155,240,11,.18) !important;
+  background: rgba(3,9,4,.78) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .markdown-table {
+  border-color: rgba(155,240,11,.22) !important;
+  background: rgba(6,11,7,.72) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .markdown-thead {
+  background: linear-gradient(90deg, rgba(155,240,11,.26), rgba(16,124,16,.18)) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] :is(.markdown-th, .markdown-td) {
+  color: #e8eee9 !important;
+  border-color: rgba(255,255,255,.10) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .markdown-th {
+  color: #dfffc2 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .latest-assistant-bar,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .assistant-action-bar {
+  color: #8f9b91 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .chat-input-v2-editor-part {
+  border: 1px solid rgba(155,240,11,.18) !important;
+  background: linear-gradient(145deg, rgba(19,26,20,.98), rgba(7,10,8,.99)) !important;
+  color: #f5f7f5 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .chat-input-v2-input-box-editable,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .chat-input-v2-input-box-editable *,
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] [data-lexical-editor="true"],
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] [data-lexical-editor="true"] * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #9bf00b !important;
+  opacity: 1 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .chat-input-v2-placeholder {
+  color: #aeb9b0 !important;
+  -webkit-text-fill-color: #aeb9b0 !important;
+  opacity: 1 !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .chat-input-v2-editor-part-lower-content {
+  border-top: 1px solid rgba(155,240,11,.10) !important;
+  background: rgba(3,7,4,.28) !important;
+}
+
+html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .session-panel-input :is(button, [role="button"], svg) {
+  color: #cdd7cf !important;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="xbox-series-xs"] .tds-brand-mark {
+  width: 33px;
+  height: 33px;
+  border: 2px solid rgba(255, 255, 255, .82);
+  border-radius: 50%;
+  background: radial-gradient(circle, #148d14 0 55%, #0b590b 56% 100%);
+  box-shadow: 0 0 0 4px rgba(155, 240, 11, .08), 0 10px 26px rgba(0, 0, 0, .45), inset 0 1px rgba(255, 255, 255, .3);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="xbox-series-xs"] .tds-brand-mark::before {
+  content: "X";
+  color: white;
+  font: 800 18px/1 Inter, system-ui, sans-serif;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .44);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="xbox-series-xs"] .tds-brand b {
+  color: #f5f7f5;
+  letter-spacing: .08em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .85);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="xbox-series-xs"] .tds-brand small,
+#trae-dream-skin-chrome[data-trae-dream-theme="xbox-series-xs"] .tds-status {
+  color: #b9c2bb;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .9);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="xbox-series-xs"] .tds-status i {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #d5ff8f;
+  background: #9bf00b;
+  box-shadow: 0 0 15px rgba(155, 240, 11, .75);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="xbox-series-xs"] .tds-quote {
+  color: #9bf00b;
+  font-style: normal;
+  font-size: 11px;
+  -webkit-text-stroke: 0;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, .92), 0 0 18px rgba(155, 240, 11, .22);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="xbox-series-xs"] .tds-orbit {
+  right: 8%;
+  top: 13%;
+  border: 1px solid rgba(155, 240, 11, .18);
+  opacity: .24;
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="xbox-series-xs"] .tds-orbit i,
+#trae-dream-skin-chrome[data-trae-dream-theme="xbox-series-xs"] .tds-particles i {
+  border: 1px solid #b8ff42;
+  border-radius: 50%;
+  background: #9bf00b;
+  box-shadow: 0 0 14px rgba(155, 240, 11, .64);
+}
+
+#trae-dream-skin-chrome[data-trae-dream-theme="xbox-series-xs"] .tds-scanline {
+  left: 0;
+  height: 1px;
+  opacity: .42;
+  background: linear-gradient(90deg, transparent, #9bf00b 38%, transparent 78%);
+  box-shadow: 0 0 12px rgba(155, 240, 11, .25);
+}
+
+@media (max-width: 920px) {
+  html.trae-dream-skin[data-trae-dream-theme="xbox-series-xs"] .tds-main {
+    background:
+      linear-gradient(90deg, rgba(4, 7, 5, .99) 0%, rgba(4, 7, 5, .93) 44%, rgba(4, 7, 5, .52) 70%, rgba(4, 7, 5, .08) 88%),
+      var(--trae-dream-art) center center / cover no-repeat,
+      #050706 !important;
+  }
+
+  #trae-dream-skin-chrome[data-trae-dream-theme="xbox-series-xs"] .tds-orbit,
+  #trae-dream-skin-chrome[data-trae-dream-theme="xbox-series-xs"] .tds-particles i:nth-child(n+5) {
+    display: none;
+  }
+}

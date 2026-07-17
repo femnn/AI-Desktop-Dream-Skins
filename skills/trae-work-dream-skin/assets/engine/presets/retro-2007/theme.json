@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "retro-2007",
+  "name": "RETRO WORK 2007",
+  "visualStyle": "retro-2007",
+  "brandSubtitle": "TRAE WORK · CLASSIC DESKTOP",
+  "tagline": "输入一个问题，从熟悉的蓝色窗口开始。",
+  "statusText": "WORKSPACE · ONLINE",
+  "quote": "WELCOME BACK",
+  "image": "retro-2007-demo.png",
+  "colors": {
+    "background": "#2b78d4",
+    "panel": "#f7fbff",
+    "panelAlt": "#e6f1fc",
+    "accent": "#2f75bd",
+    "accentAlt": "#78a9e5",
+    "secondary": "#5fa9ea",
+    "highlight": "#f4cb49",
+    "text": "#24394f",
+    "muted": "#647f9b",
+    "line": "rgba(87, 130, 176, .72)"
+  }
+}

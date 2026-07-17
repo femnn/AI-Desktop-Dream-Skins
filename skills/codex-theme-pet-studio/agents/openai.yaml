@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Theme & Pet Studio"
+  short_description: "生成、验证并切换完整 Codex 主题与桌面宠物套装"
+  default_prompt: "使用 $codex-theme-pet-studio 制作一套完整 Codex 界面主题和匹配的动画宠物。"

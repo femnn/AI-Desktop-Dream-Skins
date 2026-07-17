@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "switch2-adventure",
+  "displayName": "Switch 2 · Adventure All-Stars",
+  "version": "1.2.1",
+  "images": {
+    "hero": "assets/hero-v2-workbuddy.png",
+    "cartridge": "assets/cartridge-v4-pro2-transparent.png",
+    "joycon": "assets/joycon2-pair-straps-transparent.png"
+  },
+  "targets": {
+    "workbuddy": {
+      "css": "workbuddy.css",
+      "verification": {
+        "required": [
+          { "name": "sidebar", "any": [".conversation-sidebar"] },
+          { "name": "workspace", "any": [".teams-main-content"] }
+        ],
+        "recommended": [
+          { "name": "topbar", "any": [".workbuddy-topbar"] },
+          { "name": "conversation-list", "any": [".conversation-list"] }
+        ],
+        "contexts": [
+          {
+            "name": "home",
+            "when": { "any": [".wb-home-page"] },
+            "required": [
+              { "name": "hero", "any": [".wb-home-header"] },
+              { "name": "mode-tabs", "any": [".wb-scene-tabs"] },
+              { "name": "composer-slot", "any": [".wb-home-composer__input-slot"] }
+            ],
+            "recommended": [
+              { "name": "quick-actions", "any": [".quick-actions__list"] }
+            ]
+          },
+          {
+            "name": "conversation",
+            "when": { "any": [".project-detail-view--task-detail"] },
+            "required": [
+              { "name": "conversation-content", "any": [".project-detail-view__content"] },
+              { "name": "conversation-input", "any": [".project-detail-view__input-area"] },
+              { "name": "conversation-topbar", "any": [".task-chat-topbar-breadcrumb"] }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

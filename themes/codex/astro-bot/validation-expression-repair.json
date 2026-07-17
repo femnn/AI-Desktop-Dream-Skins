@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "packDir": "/Users/kangkang/Documents/Codex/2026-07-16/codex-codex-imagen/project/Codex-Theme-Pet-Studio/packs/astro-bot",
+  "id": "astro-bot",
+  "name": "ASTRO BOT · 星舰",
+  "themeDir": "/Users/kangkang/Documents/Codex/2026-07-16/codex-codex-imagen/project/Codex-Theme-Pet-Studio/packs/astro-bot/theme",
+  "themeId": "astro-bot",
+  "petDir": "/Users/kangkang/Documents/Codex/2026-07-16/codex-codex-imagen/project/Codex-Theme-Pet-Studio/packs/astro-bot/pet",
+  "petId": "astro-dualsense",
+  "petVersion": 2,
+  "errors": [],
+  "warnings": [],
+  "manifest": {
+    "schemaVersion": 1,
+    "id": "astro-bot",
+    "name": "ASTRO BOT · 星舰",
+    "description": "白蓝星际机器人界面与会眨眼的 DualSense 宠物套装。",
+    "theme": {
+      "path": "theme"
+    },
+    "pet": {
+      "id": "astro-dualsense",
+      "path": "pet",
+      "selectedAvatarId": "custom:astro-dualsense"
+    },
+    "compatibility": {
+      "platform": "darwin",
+      "minSkinVersion": "1.1.1"
+    }
+  }
+}

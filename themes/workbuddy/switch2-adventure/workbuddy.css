@@ -1,0 +1,650 @@
+:root.codedrobe-host-workbuddy {
+  color-scheme: dark !important;
+  --s2-ink: #f7f8fb;
+  --s2-muted: #aeb8c7;
+  --s2-black: #0a0c10;
+  --s2-panel: #15191f;
+  --s2-panel-2: #20252c;
+  --s2-line: rgba(255, 255, 255, .12);
+  --s2-blue: #55d6ff;
+  --s2-blue-deep: #087db7;
+  --s2-red: #ff5f57;
+  --s2-red-deep: #bd2433;
+  --s2-gold: #ffd65a;
+  --s2-shadow: rgba(0, 0, 0, .42);
+}
+
+html.codedrobe-host-workbuddy,
+html.codedrobe-host-workbuddy body,
+html.codedrobe-host-workbuddy #root,
+html.codedrobe-host-workbuddy .teams-container {
+  background: #080a0e !important;
+  color: var(--s2-ink) !important;
+  font-family: "Avenir Next", "SF Pro Display", "PingFang SC", sans-serif !important;
+}
+
+html.codedrobe-host-workbuddy body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 84% 16%, rgba(85, 214, 255, .13), transparent 24%),
+    radial-gradient(circle at 54% 84%, rgba(255, 95, 87, .10), transparent 26%),
+    linear-gradient(115deg, transparent 0 38%, rgba(255,255,255,.025) 38.2% 38.4%, transparent 38.6% 100%);
+}
+
+html.codedrobe-host-workbuddy :is(.teams-content-wrapper, .teams-main-content, .main-content, .chat-container, .wb-cb-chat) {
+  background: transparent !important;
+  color: var(--s2-ink) !important;
+}
+
+/* Sidebar: graphite hardware shell with blue/red controller accents. */
+html.codedrobe-host-workbuddy :is(.conversation-sidebar, .conversation-list) {
+  background: linear-gradient(180deg, #171a1f 0%, #101318 52%, #0d0f13 100%) !important;
+  color: var(--s2-ink) !important;
+  border-right: 1px solid rgba(85, 214, 255, .22) !important;
+  box-shadow: 14px 0 38px rgba(0,0,0,.36), inset -1px 0 rgba(255,95,87,.08) !important;
+}
+
+html.codedrobe-host-workbuddy :is(.conversation-list-topbar, .conversation-list-header, .conversation-list-content, .conversation-list-footer) {
+  background: transparent !important;
+}
+
+html.codedrobe-host-workbuddy .conversation-list-logo {
+  color: #fff !important;
+  font-size: 0 !important;
+  font-weight: 800 !important;
+  letter-spacing: .04em;
+  white-space: nowrap !important;
+}
+
+html.codedrobe-host-workbuddy .conversation-list-logo .logo-workbuddy-title {
+  display: none !important;
+}
+
+html.codedrobe-host-workbuddy .conversation-list-logo::before {
+  content: "SWITCH 2";
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: .15em;
+}
+
+html.codedrobe-host-workbuddy .conversation-list-logo::after {
+  content: " ADVENTURE HUB";
+  margin-left: 8px;
+  color: var(--s2-blue);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: .12em;
+}
+
+html.codedrobe-host-workbuddy .conversation-list-version-badge { display: none !important; }
+
+html.codedrobe-host-workbuddy .conversation-sidebar :is(a, button, div, p, span) { color: inherit !important; }
+html.codedrobe-host-workbuddy .conversation-sidebar svg { color: #cbd4df !important; stroke: currentColor !important; }
+
+html.codedrobe-host-workbuddy :is(.conversation-list-tab-button, .conversation-agent-card, .collapsible-section-header, .conversation-list-topbar button) {
+  border: 1px solid transparent !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  transition: transform .16s ease, background .16s ease, border-color .16s ease !important;
+}
+
+html.codedrobe-host-workbuddy :is(.conversation-list-tab-button, .conversation-agent-card, .collapsible-section-header):hover {
+  background: linear-gradient(90deg, rgba(85,214,255,.15), rgba(255,95,87,.08)) !important;
+  border-color: rgba(85,214,255,.22) !important;
+  transform: translateX(2px);
+}
+
+html.codedrobe-host-workbuddy :is(.conversation-list-tab-button.active, .conversation-agent-card.active, .conversation-agent-card[aria-selected="true"]) {
+  color: #fff !important;
+  background: linear-gradient(90deg, rgba(20,125,177,.88), rgba(18,38,52,.92) 64%, rgba(189,36,51,.42)) !important;
+  border-color: rgba(85,214,255,.54) !important;
+  box-shadow: 0 7px 18px rgba(0,0,0,.22), inset 3px 0 var(--s2-blue), inset -3px 0 var(--s2-red) !important;
+}
+
+html.codedrobe-host-workbuddy :is(.conversation-section-label, .conversation-list-tab-button-sub, .conversation-show-more-button, .timeContainer) {
+  color: #7f8997 !important;
+}
+
+html.codedrobe-host-workbuddy .user-menu {
+  border-top: 1px solid var(--s2-line);
+  background: linear-gradient(180deg, transparent, rgba(85,214,255,.04)) !important;
+}
+
+/* Top bar */
+html.codedrobe-host-workbuddy .workbuddy-topbar {
+  background: linear-gradient(90deg, rgba(10,12,16,.96), rgba(20,24,30,.92)) !important;
+  border-bottom: 1px solid rgba(255,255,255,.08) !important;
+}
+
+html.codedrobe-host-workbuddy .growth-plan-entry {
+  color: #fff !important;
+  border: 1px solid rgba(85,214,255,.28) !important;
+  border-radius: 18px !important;
+  background: linear-gradient(100deg, rgba(8,125,183,.28), rgba(189,36,51,.18)) !important;
+}
+
+html.codedrobe-host-workbuddy .growth-plan-entry__icon { color: var(--s2-red) !important; }
+
+/* Welcome layout */
+html.codedrobe-host-workbuddy .main-content--welcome {
+  background:
+    radial-gradient(circle at 82% 17%, rgba(85,214,255,.09), transparent 25%),
+    radial-gradient(circle at 40% 82%, rgba(255,95,87,.07), transparent 26%),
+    #0b0e13 !important;
+}
+
+html.codedrobe-host-workbuddy .chat-container--welcome {
+  width: calc(100% - 48px) !important;
+  max-width: 1040px !important;
+  margin-inline: auto !important;
+}
+
+html.codedrobe-host-workbuddy .wb-home-page {
+  box-sizing: border-box !important;
+  width: min(100%, 980px) !important;
+  max-width: none !important;
+  min-height: 680px !important;
+  height: 680px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  overflow: visible !important;
+}
+
+html.codedrobe-host-workbuddy .wb-home-header {
+  position: relative !important;
+  isolation: isolate;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 238px !important;
+  min-height: 238px !important;
+  flex: 0 0 238px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  padding: 0 0 0 38px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(85,214,255,.44) !important;
+  border-radius: 26px !important;
+  background-color: #0d121a !important;
+  background-image:
+    linear-gradient(90deg, rgba(10,13,18,.98) 0%, rgba(10,13,18,.91) 34%, rgba(10,13,18,.30) 56%, rgba(10,13,18,.03) 76%),
+    var(--codedrobe-image-hero) !important;
+  background-size: cover, cover !important;
+  background-position: center, center !important;
+  box-shadow: 0 20px 48px rgba(0,0,0,.45), inset 0 0 0 3px rgba(255,255,255,.04) !important;
+}
+
+html.codedrobe-host-workbuddy .wb-home-header::before {
+  content: "WELCOME TOUR  ·  SYSTEM LAB";
+  position: absolute;
+  left: 40px;
+  top: 42px;
+  color: var(--s2-blue);
+  font: 750 10px/1 "SF Mono", Menlo, monospace;
+  letter-spacing: .18em;
+}
+
+html.codedrobe-host-workbuddy .wb-home-header::after {
+  content: "●  HARDWARE EXHIBITION ONLINE";
+  position: absolute;
+  left: 40px;
+  bottom: 34px;
+  color: #dce5ef;
+  font: 700 10px/1 "SF Mono", Menlo, monospace;
+  letter-spacing: .16em;
+  text-shadow: 0 0 12px rgba(85,214,255,.65);
+}
+
+html.codedrobe-host-workbuddy :is(.wb-home-header__title, .wb-home-header__subtitle) {
+  width: 44% !important;
+  height: auto !important;
+  margin: 0 !important;
+  color: #fff !important;
+  text-align: left !important;
+  text-shadow: 0 2px 16px rgba(0,0,0,.6) !important;
+}
+
+html.codedrobe-host-workbuddy .wb-home-header__title { font-size: 0 !important; line-height: 1 !important; }
+html.codedrobe-host-workbuddy .wb-home-header__title::before {
+  content: "探索主机，也探索想法";
+  display: block;
+  font: 800 clamp(24px, 3.1vw, 34px)/1.15 "Avenir Next", "PingFang SC", sans-serif;
+  letter-spacing: -.02em;
+}
+
+html.codedrobe-host-workbuddy .wb-home-header__subtitle {
+  margin-top: 12px !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+}
+html.codedrobe-host-workbuddy .wb-home-header__subtitle::before {
+  content: "走进 Switch 2 的技术展馆，开始今天的任务。";
+  display: block;
+  color: #c8d3df;
+  font: 550 13px/1.5 "Avenir Next", "PingFang SC", sans-serif;
+  letter-spacing: .04em;
+}
+
+/* Three play-mode tabs */
+html.codedrobe-host-workbuddy .wb-home-page > div:has(> .wb-scene-tabs) {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 5px !important;
+  border: 1px solid var(--s2-line) !important;
+  border-radius: 16px !important;
+  background: linear-gradient(90deg, rgba(28,33,40,.94), rgba(18,21,27,.94)) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,.24) !important;
+}
+
+html.codedrobe-host-workbuddy .wb-scene-tabs {
+  box-sizing: border-box !important;
+  width: min(100%, 560px) !important;
+  height: 36px !important;
+  margin: 0 !important;
+  display: grid !important;
+  align-items: center !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  padding: 2px !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+html.codedrobe-host-workbuddy .wb-scene-tabs__pill {
+  width: auto !important;
+  color: #aeb8c7 !important;
+  border: 1px solid transparent !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+}
+html.codedrobe-host-workbuddy .wb-scene-tabs__pill:hover { color: #fff !important; background: rgba(255,255,255,.06) !important; }
+html.codedrobe-host-workbuddy .wb-scene-tabs__pill--active {
+  color: #fff !important;
+  border-color: rgba(85,214,255,.45) !important;
+  background: linear-gradient(100deg, rgba(8,125,183,.46), rgba(189,36,51,.28)) !important;
+  box-shadow: inset 3px 0 var(--s2-blue), inset -3px 0 var(--s2-red), 0 5px 14px rgba(0,0,0,.22) !important;
+}
+html.codedrobe-host-workbuddy .wb-scene-tabs__icon { color: var(--s2-blue) !important; }
+
+/* Composer includes the four command cards. */
+html.codedrobe-host-workbuddy .wb-home-composer {
+  position: relative !important;
+  width: 100% !important;
+  height: 370px !important;
+  overflow: visible !important;
+}
+
+html.codedrobe-host-workbuddy .wb-home-composer__chips {
+  width: 100% !important;
+  height: 116px !important;
+  overflow: visible !important;
+}
+html.codedrobe-host-workbuddy :is(.quick-actions-container, .quick-actions, .quick-actions__list) {
+  width: 100% !important;
+  height: 116px !important;
+  overflow: visible !important;
+}
+html.codedrobe-host-workbuddy .quick-actions__list {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+}
+
+html.codedrobe-host-workbuddy .quick-actions__item {
+  position: relative !important;
+  box-sizing: border-box !important;
+  width: auto !important;
+  height: 112px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-end !important;
+  gap: 10px !important;
+  padding: 16px !important;
+  color: #f5f7fa !important;
+  border: 1px solid rgba(255,255,255,.13) !important;
+  border-radius: 20px !important;
+  background: linear-gradient(145deg, rgba(35,41,49,.97), rgba(15,18,23,.98)) !important;
+  box-shadow: 0 12px 26px rgba(0,0,0,.27), inset 0 1px rgba(255,255,255,.06) !important;
+  white-space: normal !important;
+  text-align: left !important;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease !important;
+}
+html.codedrobe-host-workbuddy .quick-actions__item:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(85,214,255,.46) !important;
+  box-shadow: 0 16px 30px rgba(0,0,0,.34), inset 0 -3px var(--s2-red) !important;
+}
+
+html.codedrobe-host-workbuddy .quick-actions__item::after {
+  content: "A";
+  position: absolute;
+  right: 14px;
+  top: 13px;
+  color: rgba(255,255,255,.23);
+  font: 800 9px/1 "SF Mono", monospace;
+  letter-spacing: .1em;
+}
+html.codedrobe-host-workbuddy .quick-actions__item:nth-child(2)::after { content: "B"; color: rgba(85,214,255,.55); }
+html.codedrobe-host-workbuddy .quick-actions__item:nth-child(3)::after { content: "X"; color: rgba(255,214,90,.55); }
+html.codedrobe-host-workbuddy .quick-actions__item:nth-child(4)::after { content: "Y"; color: rgba(255,95,87,.58); }
+
+html.codedrobe-host-workbuddy .quick-actions__item--more::before {
+  content: "✦";
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  color: #071018;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ff918b, #ff504d);
+  box-shadow: 0 0 0 5px rgba(255,95,87,.09), 0 7px 16px rgba(0,0,0,.25);
+  font: 900 18px/1 sans-serif;
+}
+
+html.codedrobe-host-workbuddy .quick-actions__item-icon {
+  position: absolute !important;
+  left: 16px !important;
+  top: 14px !important;
+  width: 36px !important;
+  height: 36px !important;
+  display: grid !important;
+  place-items: center !important;
+  color: #071018 !important;
+  border: 1px solid rgba(255,255,255,.35) !important;
+  border-radius: 50% !important;
+  background: linear-gradient(145deg, #83e5ff, #2bb9ed) !important;
+  box-shadow: 0 0 0 5px rgba(85,214,255,.09), 0 7px 16px rgba(0,0,0,.25) !important;
+}
+html.codedrobe-host-workbuddy .quick-actions__item:nth-child(2) .quick-actions__item-icon { background: linear-gradient(145deg, #fff0a5, #ffc83d) !important; }
+html.codedrobe-host-workbuddy .quick-actions__item:nth-child(3) .quick-actions__item-icon { background: linear-gradient(145deg, #b6f4d4, #43d892) !important; }
+html.codedrobe-host-workbuddy .quick-actions__item:nth-child(4) .quick-actions__item-icon { background: linear-gradient(145deg, #ff918b, #ff504d) !important; }
+html.codedrobe-host-workbuddy .quick-actions__item-icon svg { width: 19px !important; height: 19px !important; color: #071018 !important; }
+
+/* Input deck and red Switch 2 cartridge launch icon. */
+html.codedrobe-host-workbuddy .wb-home-composer__input-slot {
+  position: relative !important;
+  box-sizing: border-box !important;
+  width: calc(100% - 30px) !important;
+  height: 218px !important;
+  margin-top: 12px !important;
+  margin-left: 0 !important;
+  overflow: visible !important;
+}
+
+html.codedrobe-host-workbuddy .wb-home-composer__input-slot > section {
+  position: relative !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 218px !important;
+  color: #eef3f8 !important;
+  border: 1px solid rgba(85,214,255,.33) !important;
+  border-radius: 24px !important;
+  background: linear-gradient(160deg, rgba(31,37,45,.98), rgba(13,16,21,.99)) !important;
+  box-shadow: 0 18px 38px rgba(0,0,0,.38), inset 0 1px rgba(255,255,255,.06), inset 0 -3px rgba(255,95,87,.16) !important;
+  overflow: visible !important;
+}
+
+html.codedrobe-host-workbuddy .wb-home-composer__input-slot > section::before {
+  display: none !important;
+}
+
+html.codedrobe-host-workbuddy .wb-home-composer__input-slot > section::after {
+  display: none !important;
+}
+
+html.codedrobe-host-workbuddy .wb-home-composer__input-slot [role="textbox"] {
+  position: relative !important;
+  padding-left: 66px !important;
+}
+
+html.codedrobe-host-workbuddy .wb-home-composer__input-slot [role="textbox"]::before {
+  content: "" !important;
+  position: absolute !important;
+  z-index: 30 !important;
+  left: 2px !important;
+  top: -5px !important;
+  width: 52px !important;
+  height: 62px !important;
+  display: block !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent var(--codedrobe-image-cartridge) center / contain no-repeat !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 7px 8px rgba(0,0,0,.36)) !important;
+  pointer-events: none !important;
+  transform: rotate(-2deg) !important;
+}
+
+html.codedrobe-host-workbuddy .wb-home-composer__input-slot [role="textbox"] {
+  color: #f6f8fb !important;
+  caret-color: var(--s2-blue) !important;
+}
+html.codedrobe-host-workbuddy .wb-home-composer__input-slot [role="textbox"] * { color: inherit !important; }
+html.codedrobe-host-workbuddy .wb-home-composer__input-slot button {
+  color: #dbe3ec !important;
+  border-color: rgba(255,255,255,.10) !important;
+}
+html.codedrobe-host-workbuddy .wb-input-footer {
+  border-top: 1px solid rgba(255,255,255,.08) !important;
+  background: rgba(8,10,14,.34) !important;
+}
+
+/* Keep the small cartridge in the textbox; use a distinct paired Joy-Con 2 ornament at bottom-right. */
+html.codedrobe-host-workbuddy .wb-home-composer__input-slot [class*="_topRightSlotStandalone_"] {
+  position: absolute !important;
+  z-index: 20 !important;
+  right: -70px !important;
+  top: 22px !important;
+  box-sizing: border-box !important;
+  width: 185px !important;
+  height: 185px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent var(--codedrobe-image-joycon) center / contain no-repeat !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 18px 18px rgba(0,0,0,.48)) !important;
+  transform: rotate(1.5deg) !important;
+  overflow: visible !important;
+}
+html.codedrobe-host-workbuddy .wb-home-composer__input-slot [class*="_topRightSlotStandalone_"] > * { opacity: 0 !important; pointer-events: none !important; }
+html.codedrobe-host-workbuddy .wb-home-composer__input-slot [class*="_topRightSlotStandalone_"]::after {
+  display: none !important;
+}
+
+/* Project/task conversation route: a complete Switch 2 mission screen rather
+   than a native page with only a themed sidebar. */
+html.codedrobe-host-workbuddy .project-detail-view--task-detail {
+  isolation: isolate !important;
+  color: var(--s2-ink) !important;
+  background:
+    radial-gradient(circle at 86% 16%, rgba(85,214,255,.12), transparent 27%),
+    radial-gradient(circle at 17% 84%, rgba(255,95,87,.09), transparent 29%),
+    linear-gradient(rgba(85,214,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(85,214,255,.035) 1px, transparent 1px),
+    linear-gradient(145deg, #10151c, #080b10 72%) !important;
+  background-size: auto, auto, 38px 38px, 38px 38px, auto !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view--task-detail::before {
+  content: "PLAYER 1  ·  MISSION ONLINE";
+  position: absolute;
+  z-index: 3;
+  right: 124px;
+  top: 19px;
+  color: var(--s2-blue);
+  font: 750 9px/1 "SF Mono", Menlo, monospace;
+  letter-spacing: .15em;
+  text-shadow: 0 0 14px rgba(85,214,255,.46);
+  pointer-events: none;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view--task-detail .project-detail-view__left {
+  background: transparent !important;
+  color: var(--s2-ink) !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view--task-detail .project-detail-view__body {
+  background: transparent !important;
+  color: var(--s2-ink) !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view--task-detail .project-detail-view__main {
+  background: transparent !important;
+  color: var(--s2-ink) !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view--task-detail .project-detail-view__content {
+  background: transparent !important;
+  color: var(--s2-ink) !important;
+}
+
+html.codedrobe-host-workbuddy :is(
+  .task-chat-topbar-breadcrumb,
+  .task-chat-topbar-breadcrumb__title,
+  .task-chat-topbar-breadcrumb__seg
+) {
+  color: #edf3f8 !important;
+}
+
+html.codedrobe-host-workbuddy :is(
+  .task-chat-topbar-breadcrumb__path,
+  .task-chat-topbar-breadcrumb__sep
+) {
+  color: #8b9aaa !important;
+}
+
+html.codedrobe-host-workbuddy .task-header-btn {
+  color: #d8e2eb !important;
+  border: 1px solid rgba(85,214,255,.13) !important;
+  border-radius: 10px !important;
+  background: rgba(255,255,255,.035) !important;
+}
+
+html.codedrobe-host-workbuddy .task-header-btn:not(.task-header-btn--disabled):hover {
+  color: #071018 !important;
+  border-color: var(--s2-blue) !important;
+  background: var(--s2-blue) !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__content {
+  margin: 12px 18px 0 !important;
+  width: calc(100% - 36px) !important;
+  height: calc(100% - 12px) !important;
+  border: 1px solid rgba(85,214,255,.16) !important;
+  border-radius: 22px !important;
+  background: linear-gradient(155deg, rgba(25,31,39,.86), rgba(10,13,18,.88)) !important;
+  box-shadow: inset 4px 0 rgba(85,214,255,.42), inset -4px 0 rgba(255,95,87,.28), 0 16px 38px rgba(0,0,0,.28) !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__content > div {
+  box-sizing: border-box !important;
+  padding: 18px 24px !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__content :is(p, li, h1, h2, h3, h4, h5, h6, strong, em, blockquote, td, th, span) {
+  color: inherit !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__content :is(a, button:not(.task-header-btn)) {
+  color: var(--s2-blue) !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__content :is(pre, code) {
+  color: #dff7ff !important;
+  border-color: rgba(85,214,255,.17) !important;
+  background: rgba(4,10,15,.76) !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__content table {
+  border-color: rgba(85,214,255,.22) !important;
+  background: rgba(8,13,18,.62) !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__content :is(th, td) {
+  border-color: rgba(255,255,255,.10) !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__content th {
+  color: #071018 !important;
+  background: linear-gradient(90deg, #71e2ff, #d7f7ff) !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__input-area {
+  padding-top: 8px !important;
+  background: linear-gradient(180deg, transparent, rgba(5,8,12,.88)) !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__input-area > :is(section, div):has([contenteditable="true"]) {
+  box-sizing: border-box !important;
+  border: 1px solid rgba(85,214,255,.34) !important;
+  border-radius: 20px !important;
+  background: linear-gradient(145deg, rgba(29,36,45,.98), rgba(11,15,20,.99)) !important;
+  box-shadow: 0 18px 38px rgba(0,0,0,.42), inset 3px 0 var(--s2-blue), inset -3px 0 var(--s2-red), inset 0 1px rgba(255,255,255,.07) !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__input-area > :is(section, div):has([contenteditable="true"])::before {
+  content: "GAME CHAT  ·  QUICK RESUME";
+  position: absolute;
+  z-index: 3;
+  left: 22px;
+  top: -8px;
+  padding: 3px 10px;
+  color: #071018;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--s2-blue), #dff8ff);
+  font: 800 8px/1 "SF Mono", Menlo, monospace;
+  letter-spacing: .12em;
+  box-shadow: 0 6px 14px rgba(0,0,0,.28);
+  pointer-events: none;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__input-area > :is(section, div):has([contenteditable="true"]) > div {
+  background: transparent !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__input-area [contenteditable="true"] {
+  color: #f4f7fa !important;
+  caret-color: var(--s2-blue) !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__input-area :is(button, [role="button"]) {
+  color: #dbe5ee !important;
+}
+
+html.codedrobe-host-workbuddy .project-detail-view__ai-disclaimer {
+  color: #667382 !important;
+  letter-spacing: .025em;
+}
+
+@media (max-width: 1040px) {
+  html.codedrobe-host-workbuddy .wb-home-page { width: calc(100% - 20px) !important; }
+  html.codedrobe-host-workbuddy .wb-home-header { height: 220px !important; min-height: 220px !important; flex-basis: 220px !important; }
+  html.codedrobe-host-workbuddy .quick-actions__item { padding: 12px !important; font-size: 12px !important; }
+  html.codedrobe-host-workbuddy .wb-home-composer__input-slot [class*="_topRightSlotStandalone_"] { right: -18px !important; width: 120px !important; }
+}
+
+@media (max-width: 820px) {
+  html.codedrobe-host-workbuddy .quick-actions__list { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  html.codedrobe-host-workbuddy :is(.quick-actions-container, .quick-actions, .quick-actions__list, .wb-home-composer__chips) { height: 236px !important; }
+  html.codedrobe-host-workbuddy .wb-home-composer { height: 486px !important; }
+  html.codedrobe-host-workbuddy .wb-home-header { background-position: center, 65% center !important; }
+  html.codedrobe-host-workbuddy :is(.wb-home-header__title, .wb-home-header__subtitle) { width: 55% !important; }
+}

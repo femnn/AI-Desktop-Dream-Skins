@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "trae-portal-demo",
+  "name": "TRAE PORTAL",
+  "visualStyle": "arcade-modern",
+  "brandSubtitle": "TRAE WORK · DREAM MODE",
+  "tagline": "敲下一个任务，让灵感开始流动。",
+  "statusText": "DREAM SKIN · READY",
+  "quote": "MAKE SOMETHING WONDERFUL",
+  "image": "portal-hero.png",
+  "colors": {
+    "background": "#dff5ff",
+    "panel": "#fffef6",
+    "panelAlt": "#fff6d7",
+    "accent": "#e25563",
+    "accentAlt": "#f26b78",
+    "secondary": "#36b8c8",
+    "highlight": "#f3c96a",
+    "text": "#183153",
+    "muted": "#56708f",
+    "line": "rgba(226, 85, 99, .28)"
+  }
+}

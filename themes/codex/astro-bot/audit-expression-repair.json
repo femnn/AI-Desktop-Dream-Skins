@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "packDir": "/Users/kangkang/Documents/Codex/2026-07-16/codex-codex-imagen/project/Codex-Theme-Pet-Studio/packs/astro-bot",
+  "themeId": "astro-bot",
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "wallpaper contains no unintended objects, logos, UI, or generation defects",
+    "sidebar, task page, cards, composer, project selector, and top status share one visual language",
+    "repeated card avatars are visibly distinct in a live screenshot when differentiation is intended",
+    "selected, hover, disabled, and active icons remain distinguishable without obscuring native controls",
+    "decoration is fully visible, pointer-inert, responsive, and does not cover composer controls",
+    "home and task screenshots pass at current, narrow, and short window sizes",
+    "theme and pet persist after a normal Codex relaunch without a restart loop"
+  ]
+}

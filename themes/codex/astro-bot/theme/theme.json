@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "astro-bot",
+  "name": "only on codex ·robit",
+  "brandSubtitle": "ASTRO CODEX MISSION",
+  "tagline": "穿越代码星球，找回每一个好点子。",
+  "projectPrefix": "选择星球 · ",
+  "projectLabel": "◉  选择任务星球",
+  "statusText": "BOT CREW ONLINE",
+  "quote": "ASTRO MISSION · READY",
+  "composerPlaceholder": "描述你的下一次星际任务…",
+  "image": "background-v2.png",
+  "decoration": "disc.png",
+  "colors": {
+    "background": "#040a18",
+    "panel": "#07162c",
+    "panelAlt": "#0d2341",
+    "accent": "#36a9ff",
+    "accentAlt": "#82e9ff",
+    "secondary": "#7ee7ff",
+    "highlight": "#ff7d73",
+    "text": "#f4fbff",
+    "muted": "#9ebbd2",
+    "line": "rgba(87, 193, 255, 0.34)"
+  }
+}

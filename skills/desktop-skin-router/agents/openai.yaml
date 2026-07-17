@@ -1,0 +1,4 @@
+interface:
+  display_name: "Desktop Skin Router"
+  short_description: "识别 Codex、WorkBuddy 与 TRAE 的正确主题流程"
+  default_prompt: "使用 $desktop-skin-router 判断目标桌面平台，并调用对应的专属皮肤技能。"
