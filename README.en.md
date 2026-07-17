@@ -8,11 +8,11 @@ A complete desktop-theme workflow for Codex, Tencent WorkBuddy, and TRAE Work. T
 
 | Platform | Base theme | Included | Relaunch recovery |
 | --- | --- | --- | --- |
-| Codex | ASTRO BOT · Starship | Full UI, independent decorations, four expressions, DualSense pet | Codex session guard |
-| WorkBuddy | Switch 2 · Adventure All-Stars 1.2.1 | Measured hero, cartridge, Joy-Con, home and conversation CSS | Event-driven, hot recovery first |
-| TRAE Work / TRAE SOLO | Xbox Series X\|S · Power Lab | X/S artwork, black-green UI, home and chat coverage, readable editor | Event-driven, hot recovery first |
+| Codex | ps-codex-5| Full UI, independent decorations, four expressions, DualSense pet | Codex session guard |
+| WorkBuddy | ns-workbuddy-2 | Measured hero, cartridge, Joy-Con, home and conversation CSS | Event-driven, hot recovery first |
+| TRAE Work / TRAE SOLO | trae-xbox-cn | X/S artwork, black-green UI, home and chat coverage, readable editor | Event-driven, hot recovery first |
 
-### Codex · ASTRO BOT
+### Codex · ps-codex-5
 
 ![Codex ASTRO BOT latest home with floating disc animation](screenshots/codex/home.gif)
 
@@ -20,13 +20,13 @@ A complete desktop-theme workflow for Codex, Tencent WorkBuddy, and TRAE Work. T
 
 ![Codex DualSense standalone pet](screenshots/codex/pet.png)
 
-### WorkBuddy · Switch 2
+### WorkBuddy · ns-workbuddy-2
 
 ![WorkBuddy Switch 2 home](screenshots/workbuddy/home.png)
 
 ![WorkBuddy Switch 2 project view](screenshots/workbuddy/project.png)
 
-### TRAE · Xbox Series X|S
+### TRAE · trae-xbox-cn
 
 ![TRAE Xbox home](screenshots/trae/home.png)
 
