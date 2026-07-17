@@ -4,6 +4,10 @@ set -euo pipefail
 SKILL_DIR="$(cd "$(dirname "$0")/.." && pwd -P)"
 LEGACY_PLIST="$HOME/Library/LaunchAgents/local.codex.theme-pack-session.plist"
 
+# Older engine builds launched the app twice during recovery, opening a second
+# window on New Task. Repair that exact known block before enabling persistence.
+/bin/bash "$SKILL_DIR/scripts/repair_single_launch_engine_macos.sh"
+
 # Older builds polled every five seconds. Remove that job permanently; the
 # native menu app now observes the single ChatGPT launch event instead.
 /bin/launchctl bootout "gui/$(id -u)/local.codex.theme-pack-session" >/dev/null 2>&1 || true

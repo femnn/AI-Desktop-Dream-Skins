@@ -18,6 +18,8 @@ The installer backs up previous Skills, installs the new ones, installs the Code
 
 This switches both the UI and the pet. Run it after saving your work. If the current Codex session has no hot endpoint, final recovery may require one restart.
 
+The session guard permits one Codex instance during recovery and preserves the current task route. If recovery redirects to New Task, run `repair_single_launch_engine_macos.sh` instead of reopening the app repeatedly. An old transaction may roll back only while it still owns the active lock, so it cannot overwrite a newer theme and pet.
+
 ## WorkBuddy
 
 CodeDrobe Core 0.3.0 is required. The default path is `~/Documents/WorkBuddy/CodeDrobe-core`; override it with `CODEDROBE_CORE_DIR`.

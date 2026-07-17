@@ -74,6 +74,11 @@ acquire_lock() {
   printf '%s\n' "$$" >"$LOCK/pid"
 }
 
+owns_lock() {
+  [ -f "$LOCK/pid" ] || return 1
+  [ "$(/bin/cat "$LOCK/pid" 2>/dev/null || true)" = "$$" ]
+}
+
 restore_transaction() {
   set +e
   rm -rf "$ACTIVE_THEME"
@@ -92,9 +97,17 @@ restore_transaction() {
 
 cleanup() {
   code=$?
-  if [ "$code" -ne 0 ] && [ "$ROLLBACK_NEEDED" = "true" ]; then restore_transaction; fi
+  if [ "$code" -ne 0 ] && [ "$ROLLBACK_NEEDED" = "true" ]; then
+    if owns_lock; then
+      restore_transaction
+    else
+      log "skipped stale rollback target=$PACK_ID owner=$$"
+    fi
+  fi
   rm -rf "$TXN"
-  /usr/bin/find "$LOCK" -depth -delete 2>/dev/null || true
+  if owns_lock; then
+    /usr/bin/find "$LOCK" -depth -delete 2>/dev/null || true
+  fi
   exit "$code"
 }
 trap cleanup EXIT

@@ -18,7 +18,7 @@ A complete desktop-theme workflow for Codex, Tencent WorkBuddy, and TRAE Work. T
 
 ![Codex ASTRO BOT project view](screenshots/codex/project.png)
 
-![Codex DualSense standalone pet](screenshots/codex/pet.png)
+<img src="screenshots/codex/pet.gif" alt="Codex DualSense animated pet" width="384">
 
 ### WorkBuddy · ns-workbuddy-2
 

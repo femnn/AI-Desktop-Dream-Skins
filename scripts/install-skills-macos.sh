@@ -26,6 +26,8 @@ done
 /usr/bin/python3 "$TARGET/codex-theme-pet-studio/scripts/install_pack.py" \
   "$ROOT/themes/codex/astro-bot"
 
+"$TARGET/codex-theme-pet-studio/scripts/install_session_guard_macos.sh"
+
 "$TARGET/desktop-skin-router/scripts/install_persistence_guard_macos.sh" \
   --enable-trae \
   --workbuddy-theme "$ROOT/themes/workbuddy/switch2-adventure/switch2-adventure-1.2.1.codedrobe-theme"

@@ -102,6 +102,8 @@ Install the session guard so the current pack is restored when the user later op
 
 The native menu app observes the next Codex launch event without polling. It never launches Codex after the user quits; when the user opens a normal Codex session that lacks the loopback theme endpoint, it performs one controlled themed restart. The installer removes the legacy five-second LaunchAgent, enforces a single menu-app instance, and stale operation locks are cleared only when their recorded owner process is gone.
 
+The installer must also run `repair_single_launch_engine_macos.sh`. A recovery may call `open -na` exactly once: a second launch creates another Codex window and redirects the user to New Task. Transaction cleanup may roll back only while it still owns the active lock; a stale process must never restore an older theme or pet over a newer successful switch.
+
 ## Acceptance
 
 - `validate_pack.py` reports `ok: true`.
@@ -115,3 +117,4 @@ The native menu app observes the next Codex launch event without polling. It nev
 - Creating or repairing a pack performs no intermediate Codex restarts; live activation happens only after all offline work passes.
 - Switching pack A → B → A restores both interface and pet each time.
 - A forced switch failure restores the previous theme, avatar setting, and current-pack record.
+- A normal recovery creates one Codex main process, preserves the current task route, and never opens New Task as a side effect.

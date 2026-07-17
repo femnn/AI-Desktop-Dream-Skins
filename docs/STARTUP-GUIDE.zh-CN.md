@@ -20,6 +20,8 @@ cd /你的路径/AI-Desktop-Dream-Skins
 
 这条命令会同时切换界面和宠物。请在工作完成后执行；如果当前 Codex 没有可用热连接，最终恢复可能需要一次重启。
 
+会话守卫只允许恢复过程启动一个 Codex 实例，并保持当前任务位置。若出现自动跳到“新建任务”，先运行 `repair_single_launch_engine_macos.sh`，不要连续重开应用。旧切换事务只有在仍持有活动锁时才允许回滚，不能覆盖更新后的主题和宠物。
+
 ## WorkBuddy
 
 需要 CodeDrobe Core 0.3.0，默认位置为 `~/Documents/WorkBuddy/CodeDrobe-core`，也可用 `CODEDROBE_CORE_DIR` 指定。

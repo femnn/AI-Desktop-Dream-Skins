@@ -18,7 +18,7 @@
 
 ![Codex ASTRO BOT 项目页](screenshots/codex/project.png)
 
-![Codex DualSense 独立宠物](screenshots/codex/pet.png)
+<img src="screenshots/codex/pet.gif" alt="Codex DualSense 动态宠物" width="384">
 
 ### WorkBuddy · ns-workbuddy-2
 
