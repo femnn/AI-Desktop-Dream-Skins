@@ -8,11 +8,11 @@
 
 | 平台 | 基础主题 | 套装内容 | 启动恢复 |
 | --- | --- | --- | --- |
-| Codex | ASTRO BOT · 星舰 | 完整界面、独立装饰、四种表情、DualSense 宠物 | Codex 自身会话守卫 |
-| WorkBuddy | Switch 2 · Adventure All-Stars 1.2.1 | 专用横幅、卡带、Joy-Con、首页与会话页 CSS | 事件驱动守卫，优先热恢复 |
-| TRAE Work / TRAE SOLO | Xbox Series X\|S · Power Lab | X/S 主视觉、黑绿界面、首页与会话页、高对比输入框 | 事件驱动守卫，优先热恢复 |
+| Codex | ps-codex-5  | 完整界面、独立装饰、四种表情、DualSense 宠物 | Codex 自身会话守卫 |
+| WorkBuddy |ns-workbuddy-2 | 专用横幅、卡带、Joy-Con、首页与会话页 CSS | 事件驱动守卫，优先热恢复 |
+| TRAE Work / TRAE SOLO | trae-xbox-cn | X/S 主视觉、黑绿界面、首页与会话页、高对比输入框 | 事件驱动守卫，优先热恢复 |
 
-### Codex · ASTRO BOT
+### Codex · ps-codex-5
 
 ![Codex ASTRO BOT 最新版首页与悬浮光盘动画](screenshots/codex/home.gif)
 
@@ -20,13 +20,13 @@
 
 ![Codex DualSense 独立宠物](screenshots/codex/pet.png)
 
-### WorkBuddy · Switch 2
+### WorkBuddy · ns-workbuddy-2
 
 ![WorkBuddy Switch 2 首页](screenshots/workbuddy/home.png)
 
 ![WorkBuddy Switch 2 项目页](screenshots/workbuddy/project.png)
 
-### TRAE · Xbox Series X|S
+### TRAE · trae-xbox-cn
 
 ![TRAE Xbox 首页](screenshots/trae/home.png)
 
