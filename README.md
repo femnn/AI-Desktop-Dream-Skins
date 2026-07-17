@@ -16,21 +16,21 @@
 
 ![Codex ASTRO BOT 首页](screenshots/codex/home.png)
 
-![Codex ASTRO BOT 表情与组件](screenshots/codex/expressions.png)
+![Codex ASTRO BOT 项目页](screenshots/codex/project.png)
+
+![Codex DualSense 宠物动作与表情](screenshots/codex/pet.png)
 
 ### WorkBuddy · Switch 2
 
 ![WorkBuddy Switch 2 首页](screenshots/workbuddy/home.png)
 
-![WorkBuddy Switch 2 会话页](screenshots/workbuddy/conversation.png)
+![WorkBuddy Switch 2 项目页](screenshots/workbuddy/project.png)
 
 ### TRAE · Xbox Series X|S
 
 ![TRAE Xbox 首页](screenshots/trae/home.png)
 
-![TRAE Xbox 会话页](screenshots/trae/conversation.png)
-
-![TRAE Xbox 输入文字对比度](screenshots/trae/input-contrast.png)
+![TRAE Xbox 项目页](screenshots/trae/project.png)
 
 ## 安装 Skills
 

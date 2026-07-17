@@ -16,21 +16,21 @@ A complete desktop-theme workflow for Codex, Tencent WorkBuddy, and TRAE Work. T
 
 ![Codex ASTRO BOT home](screenshots/codex/home.png)
 
-![Codex ASTRO BOT expressions](screenshots/codex/expressions.png)
+![Codex ASTRO BOT project view](screenshots/codex/project.png)
+
+![Codex DualSense pet actions and expressions](screenshots/codex/pet.png)
 
 ### WorkBuddy · Switch 2
 
 ![WorkBuddy Switch 2 home](screenshots/workbuddy/home.png)
 
-![WorkBuddy Switch 2 conversation](screenshots/workbuddy/conversation.png)
+![WorkBuddy Switch 2 project view](screenshots/workbuddy/project.png)
 
 ### TRAE · Xbox Series X|S
 
 ![TRAE Xbox home](screenshots/trae/home.png)
 
-![TRAE Xbox conversation](screenshots/trae/conversation.png)
-
-![TRAE Xbox input contrast](screenshots/trae/input-contrast.png)
+![TRAE Xbox project view](screenshots/trae/project.png)
 
 ## Install the Skills
 
