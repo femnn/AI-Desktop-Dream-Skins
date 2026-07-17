@@ -14,11 +14,11 @@ A complete desktop-theme workflow for Codex, Tencent WorkBuddy, and TRAE Work. T
 
 ### Codex · ASTRO BOT
 
-![Codex ASTRO BOT home](screenshots/codex/home.png)
+![Codex ASTRO BOT latest home with floating disc animation](screenshots/codex/home.gif)
 
 ![Codex ASTRO BOT project view](screenshots/codex/project.png)
 
-![Codex DualSense pet actions and expressions](screenshots/codex/pet.png)
+![Codex DualSense standalone pet](screenshots/codex/pet.png)
 
 ### WorkBuddy · Switch 2
 

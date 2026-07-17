@@ -14,11 +14,11 @@
 
 ### Codex · ASTRO BOT
 
-![Codex ASTRO BOT 首页](screenshots/codex/home.png)
+![Codex ASTRO BOT 最新版首页与悬浮光盘动画](screenshots/codex/home.gif)
 
 ![Codex ASTRO BOT 项目页](screenshots/codex/project.png)
 
-![Codex DualSense 宠物动作与表情](screenshots/codex/pet.png)
+![Codex DualSense 独立宠物](screenshots/codex/pet.png)
 
 ### WorkBuddy · Switch 2
 
