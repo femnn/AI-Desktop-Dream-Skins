@@ -8,7 +8,7 @@ A complete desktop-theme workflow for Codex, Tencent WorkBuddy, and TRAE Work. T
 
 | Platform | Base theme | Included | Relaunch recovery |
 | --- | --- | --- | --- |
-| Codex | ps-codex-5| Full UI, independent decorations, four expressions, DualSense pet | Codex session guard |
+| Codex | ps-codex-5 | Full UI, independent decorations, four expressions, DualSense pet | Codex session guard |
 | WorkBuddy | ns-workbuddy-2 | Measured hero, cartridge, Joy-Con, home and conversation CSS | Event-driven, hot recovery first |
 | TRAE Work / TRAE SOLO | trae-xbox-cn | X/S artwork, black-green UI, home and chat coverage, readable editor | Event-driven, hot recovery first |
 
@@ -68,6 +68,18 @@ scripts/      Installer and read-only diagnostics
 - Decorative layers must be pointer-inert, and text contrast must be checked at live size.
 - The persistence guard reacts to launch events; it does not poll and never reopens an app after the user quits.
 
+## Acknowledgements
+
+Special thanks to the following original projects and open-source work for their foundations, inspiration, and compatibility references:
+
+- [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin): the original Codex Dream Skin project and theme-engine foundation.
+- [captainfod/TRAE-Work-Dream-Skin](https://github.com/captainfod/TRAE-Work-Dream-Skin): the foundation for TRAE Work theme adaptation.
+- [openai/skills · hatch-pet](https://github.com/openai/skills/tree/main/skills/.curated/hatch-pet): the reference workflow and format for Codex desktop pets.
+
+Thanks to the original authors and all contributors. This repository builds on their work with separate platform contracts, persistent recovery, full-interface adaptation, and bundled base themes for all three applications.
+
 ## Notice
 
 This is an unofficial, fan-made local theming toolkit. Product names and marks including Codex, ASTRO BOT, PlayStation, Nintendo Switch, Xbox, TRAE, and WorkBuddy belong to their respective owners. Original theme artwork in this repository does not imply endorsement or official authorization. Users are responsible for applicable terms and redistribution rights.
+
+Base-theme platform mapping: `ps-codex-5` is the **PS5** theme, `ns-workbuddy-2` is the **NS2** theme, and `trae-xbox-cn` is the **XSX/S** theme.

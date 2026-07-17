@@ -8,8 +8,8 @@
 
 | 平台 | 基础主题 | 套装内容 | 启动恢复 |
 | --- | --- | --- | --- |
-| Codex | ps-codex-5  | 完整界面、独立装饰、四种表情、DualSense 宠物 | Codex 自身会话守卫 |
-| WorkBuddy |ns-workbuddy-2 | 专用横幅、卡带、Joy-Con、首页与会话页 CSS | 事件驱动守卫，优先热恢复 |
+| Codex | ps-codex-5 | 完整界面、独立装饰、四种表情、DualSense 宠物 | Codex 自身会话守卫 |
+| WorkBuddy | ns-workbuddy-2 | 专用横幅、卡带、Joy-Con、首页与会话页 CSS | 事件驱动守卫，优先热恢复 |
 | TRAE Work / TRAE SOLO | trae-xbox-cn | X/S 主视觉、黑绿界面、首页与会话页、高对比输入框 | 事件驱动守卫，优先热恢复 |
 
 ### Codex · ps-codex-5
@@ -76,6 +76,18 @@ scripts/      安装与只读检查脚本
 - 装饰层必须 `pointer-events: none`，文字必须经过真实尺寸对比度检查。
 - 持久化守卫监听应用启动事件，不轮询，也不会在用户退出后擅自打开应用。
 
+## 致谢
+
+特别感谢以下原项目和开源工作提供基础、灵感与兼容参考：
+
+- [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin)：Codex Dream Skin 的原始项目与主题引擎基础。
+- [captainfod/TRAE-Work-Dream-Skin](https://github.com/captainfod/TRAE-Work-Dream-Skin)：TRAE Work 主题适配基础。
+- [openai/skills · hatch-pet](https://github.com/openai/skills/tree/main/skills/.curated/hatch-pet)：Codex 桌面宠物格式与制作工作流参考。
+
+感谢原作者和所有贡献者。本仓库在这些工作的基础上，补充了三个平台各自独立的主题规范、持久化恢复、完整界面适配与基础主题。
+
 ## 声明
 
 这是非官方、粉丝创作的本地主题工具。Codex、ASTRO BOT、PlayStation、Nintendo Switch、Xbox、TRAE 和 WorkBuddy 等名称及相关标识归各自权利人所有。仓库中的原创主题素材不代表任何官方授权；使用者应自行确认当地法律、软件条款和再分发权限。
+
+三个基础主题的平台对应关系：`ps-codex-5` 为 **PS5** 主题，`ns-workbuddy-2` 为 **NS2** 主题，`trae-xbox-cn` 为 **XSX/S** 主题。
